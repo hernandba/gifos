@@ -1,0 +1,92 @@
+@media (max-width: 639px) {
+    #srch {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #srch-bar {
+            width: 89%;
+            padding: 0 18px;
+
+            display: flex;
+            flex-direction: column;
+
+            border: 1px solid $purple;
+            border-radius: 27px;
+
+            #srch-field {
+                padding: 15px 0 10px;
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    width: 24px;
+                    height: 24px;
+
+                    :hover {
+                        cursor: pointer;
+                    }
+                }
+
+                #srch-input {
+                    font-size: 16px;
+                    padding-left: 37px;
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            #srch-suggest-list {
+                // display: flex;
+                // flex-direction: column;
+                padding: 9px 0 13px;
+                border-top: 1px solid $grey;
+
+                :hover {
+                    cursor: pointer;
+                    background-color: lightblue;
+                }
+
+                .srch-suggest {
+                    width: 100%;
+                    display: flex;
+
+                    padding: 5px 0 5px;
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    p {
+                        margin-left: 14px;
+                        color: $grey;
+                    }
+                }
+            }
+        }
+
+        #srch-trends {
+            padding: 31px 20% 35px;
+        }
+
+        #srch-results {
+            // width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            padding-bottom: 79px;
+
+            #srch-results-title {
+                padding: 43px 0 38px 0;
+                border-top: 1px solid $grey;
+                font-size: 25px;
+            }
+
+            #srch-no-results{
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+button {
+    transition: all 0.2s;
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+}
+
+.fav-inactive{
+    background-image: url(/PROYECTOS/GIFOS/assets/icon-fav-hover.svg);
+}
+
+.fav-active{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url(/PROYECTOS/GIFOS/assets/icon-fav-active.svg);
+    background-color: $white;
+}
+
+.more-btn {
+    padding: 18px 32px;
+    margin-top: 78px;
+    font-size: 13px;
+    text-transform: uppercase;
+    border: 1px solid $purple;
+    border-radius: 25px;
+}

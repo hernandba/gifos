@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS</title>
+    <script src="https://kit.fontawesome.com/f124302576.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+</head>
+
+<body>
+    <nav id="nav-bar">
+        <a href="./index.html" class="btn-logo">
+            <img src="../assets/logo-desktop.svg" alt="Logo GIFOS" id="logo-desktop" class="desktop">
+            <img src="../assets/logo-desktop-noc.svg" alt="Logo GIFOS" class="desktop dark">
+            <img src="../assets/logo-mobile.svg" alt="Logo GIFOS" class="mobile">
+            <img src="../assets/logo-mobile-noc.svg" alt="Logo GIFOS" class="mobile dark">
+        </a>
+        <button class="btn-ham"><img src="../assets/burger.svg" alt="Boton Hamburguesa"></button>
+
+        <div id="nav-menu" class="nav-menu-hide">
+            <a class="main-txt-font lit-txt-color" href="#">Modo Nocturno</a>
+            <a class="main-txt-font lit-txt-color" href="./favs.html">Favoritos</a>
+            <a class="main-txt-font lit-txt-color" href="./misGifos.html">Mis GIFOS</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1 class="main-title-font lit-txt-color">Inspírate, busca, guarda y crea los mejores <span
+                class="txt-accent">GIFOS</span></h1>
+        <img src="../assets/ilustra_header.svg" alt="Ilustración de Bienvenida">
+    </header>
+
+    <section id="srch">
+        <div id="srch-bar">
+            <div id="srch-field">
+                <input id="srch-input" type="text" placeholder="Busca GIFOS y más..."
+                    onblur="this.placeholder='Busca GIFOS y más...'">
+                <button id="srch-btn" class=""><img src="../assets/icon-search.svg" alt="Boton Busqueda"></button>
+                <button id="srch-close-btn" class="hide"><img src="../assets/close.svg"
+                        alt="Boton Cerrar Busqueda"></button>
+            </div>
+
+            <div id="srch-suggest-list" class="hide">
+                <div class="srch-suggest">
+                    <img src="../assets/icon-search.svg" alt="Sugerencia de Busqueda">
+                    <p id="srch-suggest-txt" class="second-txt-font"></p>
+                </div>
+            </div>
+        </div>
+
+        <article id="srch-trends">
+            <h3 class="main-title-font lit-txt-color">Trending:</h3>
+            <p id="trending-terms-pgraph" class="main-txt-font lit-txt-color"></p>
+        </article>
+
+        <div id="srch-results-container" class="hide">
+            <div id="srch-results">
+                <h2 id="srch-results-title" class="main-title-font lit-txt-color"></h2>
+
+                <div id="srch-no-results" class="hide">
+                    <img src="../assets/icon-busqueda-sin-resultado.svg" alt="Búsqueda sin resultado">
+                    <h3 class="main-title-font txt-accent">Intenta con otra búsqueda</h3>
+                </div>
+    
+                <div id="srch-results-gifs-container" class="gifcards-container">
+                </div>
+    
+                <button id="srch-results-more-btn" class="more-btn main-title-font lit-txt-color">Ver más</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="trending-gifs">
+        <h2 class="main-title-font lit-txt-color">Trending GIFOS</h2>
+        <p class="second-txt-font">Mira los últimos <br> GIFOS de nuestra comunidad.</p>
+
+        <div id="trending-gifs-slider">
+            <div id="trending-gifs-container">
+
+                <div class="gifcard hide">
+
+                    <div class="gifcard-overlay">
+                        <div class="gifcard-overlay-bar-btns">
+                            <button class="btn-fav fav-inactive"></button>
+                            <a class="gifcard-down-link" href="#" data-href="" download="">
+                                <button class="btn-down"><img src="../assets/icon-download-hover.svg"
+                                        alt="Boton Descargar Gif"></button>
+                            </a>
+                            <button class="btn-max"><img src="../assets/icon-max-hover.svg"
+                                    alt="Boton Maximizar Gif"></button>
+                        </div>
+                        <article class="gifcard-info">
+                            <h4 class="gifcard-info-user"></h4>
+                            <h3 class="gifcard-info-title"></h3>
+                        </article>
+                    </div>
+
+                    <div class="gifcard-max-container hide">
+                        <div class="gifcard-max">
+                            <button class="btn-close"><img src="../assets/close.svg" alt="Boton Cerrar"></button>
+                            <img class="gifcard-max-gifimg" src="" alt="Imagen Gif">
+
+                            <div class="gifcard-max-bar">
+                                <article class="gifcard-info">
+                                    <h4 class="gifcard-info-user"></h4>
+                                    <h3 class="gifcard-info-title"></h3>
+                                </article>
+                                <div class="gifcard-max-bar-btns">
+                                    <button class="btn-fav fav-inactive"></button>
+                                    <a class="gifcard-down-link" href="#" data-href="" download="">
+                                        <button class="btn-down"><img src="../assets/icon-download-hover.svg"
+                                                alt="Boton Descargar Gif"></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="social-share">
+            <h5 class="second-txt-font">Compartir en: </h5>
+            <div id="social-icons">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg"></i></a>
+            </div>
+        </div>
+        <h5 class="second-txt-font">&copy; GIFOS 2021 All Rights Reserved.</h5>
+    </footer>
+
+    <script type="text/javascript" src="../scripts/menu_mobile.js"></script>
+    <script type="text/javascript" src="../scripts/index.js"></script>
+</body>
+
+</html>

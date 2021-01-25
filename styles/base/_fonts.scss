@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap');
+
+/* ----------------------------- FONT VARIABLES ----------------------------- */
+
+$montserrat: 'Montserrat', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+/* ---------------------------- MAIN FONT STYLES ---------------------------- */
+
+//Montserrat Bold: 700
+.main-title-font{
+    font-family: $montserrat;
+    font-weight: 700;
+    text-align: center;
+}
+
+//Monserrat Medium: 500
+.main-txt-font{
+    font-family: $montserrat;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* --------------------------- SECOND FONT STYLES --------------------------- */
+
+//Roboto Bold: 700
+.second-title-font{
+    font-family: $roboto;
+    font-weight: 700;
+    text-align: center;
+}
+
+//Roboto Bold: 400
+.second-txt-font{
+    font-family: $roboto;
+    font-weight: 400;
+    text-align: center;
+}

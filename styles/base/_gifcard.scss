@@ -1,0 +1,96 @@
+.gifcard {
+    // width: 243px;
+    // height: 187px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    button{
+        width: 32px;
+        height: 32px;
+        border-radius: 20%;
+    }
+
+    .gifcard-info {
+        h4 {
+            font-family: $roboto;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            font-family: $montserrat;
+        }
+    }
+
+    &:hover .gifcard-overlay {
+        opacity: 1;
+    }
+
+    .gifcard-overlay {
+        transition: .4s ease;
+        opacity: 0;
+
+        width: 100%;
+        height: 100%;
+        padding: 10px 10px 5% 5%;
+        background-color: rgba($color: $purple, $alpha: 0.8);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .gifcard-overlay-bar-btns {
+            align-self: flex-end;
+            display: flex;
+            gap: 11px;
+            
+            button {
+                opacity: 0.4;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+
+        .gifcard-info{
+            color: white;
+        }
+    }
+
+    .gifcard-max-container {
+        .gifcard-max {
+            width: 100%;
+            height: 100%;
+            padding: 0 7.5% 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba($color: white, $alpha: 0.9);
+            z-index: 2;
+
+            .btn-close {
+                margin: 0 5px 73px 0;
+                padding: 5px;
+                align-self: flex-end;
+            }
+
+            .gifcard-max-bar {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 14px;
+
+                .gifcard-max-bar-btns {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}

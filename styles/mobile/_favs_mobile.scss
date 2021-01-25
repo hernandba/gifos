@@ -1,0 +1,20 @@
+@media (max-width: 639px) {
+    #fav-gifs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #fav-gifs-title {
+            text-align: center;
+            padding-bottom: 46px;
+        }
+
+        #fav-gifs-empty {
+            text-align: center;
+
+            p {
+                padding: 0 20%;
+            }
+        }
+    }
+}
