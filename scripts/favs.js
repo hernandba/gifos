@@ -1,20 +1,3 @@
-/* ------------------------- GIPHY API CREDENTIALS ------------------------- */
-let api_key = '4vH8UHoIqQdiqEF09F0RMipmSWYCp7Yu',
-    urlApi = 'https://api.giphy.com/v1',
-    urlTrendingGifs = `${urlApi}/gifs/trending?api_key=${api_key}&limit=25&rating=g`;
-
-let gifCard = document.querySelector('.gifcard');
-
-async function getApiInfo(url) {
-    const response = await fetch(url);
-    // console.log(response);
-    const json = await response.json();
-    // console.log(json);
-    let data = json.data;
-    // console.log(data);
-    return data;
-}
-
 /* -------------------------------------------------------------------------- */
 /*                                  FAV GIFS                                  */
 /* -------------------------------------------------------------------------- */
@@ -22,17 +5,9 @@ let favGifsStorage = JSON.parse(localStorage.getItem('favGifsStorage'));
 console.log(favGifsStorage);
 
 /* -------------------------------------------------------------------------- */
-/*                                TRENDING GIFS                               */
-/* -------------------------------------------------------------------------- */
-let trendingGifsContainer = document.querySelector('#trending-gifs-container');
-
-getApiInfo(urlTrendingGifs).then(data => {
-    createGifcards(data, trendingGifsContainer, '243px', '187px');
-}).catch(console.error);
-
-/* -------------------------------------------------------------------------- */
 /*                       GIFCARD CREATION AND FUNCTIONS                       */
 /* -------------------------------------------------------------------------- */
+let gifCard = document.querySelector('.gifcard');
 
 function createGifcards(apiData, gifcardsContainer, gifcardWidth, gifcardHeight) {
     apiData.forEach(element => {

@@ -1,20 +1,3 @@
-/* ------------------------- GIPHY API CREDENTIALS ------------------------- */
-let api_key = '4vH8UHoIqQdiqEF09F0RMipmSWYCp7Yu',
-    urlApi = 'https://api.giphy.com/v1',
-    urlTrendingTerms = `${urlApi}/trending/searches?api_key=${api_key}`,
-    urlTrendingGifs = `${urlApi}/gifs/trending?api_key=${api_key}&limit=25&rating=g`,
-    urlSrchSuggests = `${urlApi}/gifs/search/tags?api_key=${api_key}&q=`;
-
-async function getApiInfo(url) {
-    const response = await fetch(url);
-    // console.log(response);
-    const json = await response.json();
-    // console.log(json);
-    let data = json.data;
-    // console.log(data);
-    return data;
-}
-
 /* -------------------------------------------------------------------------- */
 /*                                 SEARCH GIFS                                */
 /* -------------------------------------------------------------------------- */
@@ -196,40 +179,10 @@ srchInput.addEventListener('keyup', (event) => {
 });
 
 /* -------------------------------------------------------------------------- */
-/*                               TRENDING TERMS                               */
-/* -------------------------------------------------------------------------- */
-let trendingTermsPgraph = document.getElementById('trending-terms-pgraph');
-
-getApiInfo(urlTrendingTerms).then(data => {
-    for (var i = 0; i < 5; i++) {
-        if (i < 4) {
-            trendingTermsPgraph.innerHTML += data[i].charAt(0).toUpperCase() + data[i].slice(1) + ', ';
-        } else {
-            trendingTermsPgraph.innerHTML += data[i].charAt(0).toUpperCase() + data[i].slice(1) + '.';
-        }
-    }
-}).catch(console.error);
-
-/* -------------------------------------------------------------------------- */
-/*                                TRENDING GIFS                               */
-/* -------------------------------------------------------------------------- */
-let trendingGifsContainer = document.querySelector('#trending-gifs-container');
-
-getApiInfo(urlTrendingGifs).then(data => {
-    createGifcards(data, trendingGifsContainer);
-}).catch(console.error);
-
-/* -------------------------------------------------------------------------- */
 /*                       GIFCARD CREATION AND FUNCTIONS                       */
 /* -------------------------------------------------------------------------- */
 let gifCard = document.querySelector('.gifcard');
 let favGifs = [];
-
-// function favGifCreator(element){
-//     return {
-
-//     }
-// }
 
 function createGifcards(apiData, gifcardsContainer) {
     apiData.forEach(element => {
@@ -276,23 +229,26 @@ function createGifcards(apiData, gifcardsContainer) {
             element.querySelector('.gifcard-max-container').classList.add('hide');
             event.stopPropagation();
         });
-
+        
         //Guardar en Favoritos
         element.querySelectorAll('.btn-fav').forEach(k => {
             k.addEventListener('click', (event) => {
                 //Dar like y guardar en favs
                 if (k.classList.contains('fav-inactive')) {
-                    favGifs.push(JSON.stringify(element));
-                    console.log(favGifs);
-                    localStorage.setItem('favGifsStorage', JSON.stringify(favGifs));
-                    console.log(localStorage.getItem('favGifsStorage'));
+                    console.log('LIKE!')
+                    console.log(element);
+                    // favGifs.push(JSON.stringify(element));
+                    // console.log(favGifs);
+                    // localStorage.setItem('favGifsStorage', JSON.stringify(favGifs));
+                    // console.log(localStorage.getItem('favGifsStorage'));
                     //Quitar like y remover de favs
                 } else if (k.classList.contains('fav-active')) {
+                    console.log('DISLIKE!')
                     if (favGifs.length > 0) {
-                        favGifs.splice(favGifs.indexOf(element), 1);
-                        console.log(favGifs);
-                        localStorage.setItem('favGifsStorage', JSON.stringify(favGifs));
-                        console.log(JSON.parse(localStorage.getItem('favGifsStorage')));
+                        // favGifs.splice(favGifs.indexOf(element), 1);
+                        // console.log(favGifs);
+                        // localStorage.setItem('favGifsStorage', JSON.stringify(favGifs));
+                        // console.log(JSON.parse(localStorage.getItem('favGifsStorage')));
                     }
                 }
                 k.classList.toggle('fav-inactive');
