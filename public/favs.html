@@ -41,7 +41,7 @@
         <div id="fav-gifs-results" class="gifcards-container">
         </div>
 
-        <button id="fav-gifs-more-btn" class="more-btn main-title-font lit-txt-color">Ver más</button>
+        <button id="fav-gifs-more-btn" class="more-btn main-title-font lit-txt-color hide">Ver más</button>
 
     </section>
 
@@ -51,12 +51,13 @@
 
         <div id="trending-gifs-slider">
             <div id="trending-gifs-container">
+
                 <div class="gifcard hide">
+                    <span id="gifId" class="hide"></span>
 
                     <div class="gifcard-overlay">
                         <div class="gifcard-overlay-bar-btns">
-                            <button class="btn-fav"><img src="../assets/icon-fav-hover.svg"
-                                    alt="Boton Favorito Gif"></button>
+                            <button class="btn-fav fav-inactive"></button>
                             <a class="gifcard-down-link" href="#" data-href="" download="">
                                 <button class="btn-down"><img src="../assets/icon-download-hover.svg"
                                         alt="Boton Descargar Gif"></button>
@@ -81,8 +82,7 @@
                                     <h3 class="gifcard-info-title"></h3>
                                 </article>
                                 <div class="gifcard-max-bar-btns">
-                                    <button class="btn-fav"><img src="../assets/icon-fav-hover.svg"
-                                            alt="Boton Favorito Gif"></button>
+                                    <button class="btn-fav fav-inactive"></button>
                                     <a class="gifcard-down-link" href="#" data-href="" download="">
                                         <button class="btn-down"><img src="../assets/icon-download-hover.svg"
                                                 alt="Boton Descargar Gif"></button>
@@ -111,6 +111,7 @@
 
     <script type="text/javascript" src="../scripts/menu_mob.js"></script>
     <script type="text/javascript" src="../scripts/infoAPI.js"></script>
+    <script type="text/javascript" src="../scripts/favs_init.js"></script>
     <script type="text/javascript" src="../scripts/gifcard.js"></script>
     <script type="text/javascript" src="../scripts/favs.js"></script>
     <script type="text/javascript" src="../scripts/trendingGifs.js"></script>

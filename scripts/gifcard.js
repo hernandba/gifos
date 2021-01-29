@@ -3,23 +3,21 @@
 /* -------------------------------------------------------------------------- */
 let gifCard = document.querySelector('.gifcard');
 
-let favGifs;
-if (localStorage.length > 0) {
-    console.log('Si habia inf en localStorage');
-    favGifs = JSON.parse(localStorage.getItem('favGifsStorage'));
-    console.log(favGifs);
-} else {
-    console.log('No habia info en localStorage');
-    favGifs = [];
-}
-
 function createGifcards(apiData, gifcardsContainer) {
     apiData.forEach(element => {
         let gifId = element.id;
         let gifUser = element.username;
         let gifTitle = element.title;
-        let gifDisplay = element.images.downsized.url || element.display;
-        let gifDownlink = element.images.original.url || element.downlink;
+
+        let gifDisplay;
+        let gifDownlink;
+        if (typeof(element.images) != 'undefined') {
+            gifDisplay = element.images.downsized.url;
+            gifDownlink = element.images.original.url;
+        } else {
+            gifDisplay = element.display;
+            gifDownlink = element.downlink;;
+        }
 
         let newGifcard = document.createElement('div');
         newGifcard.setAttribute('class', 'gifcard');
@@ -47,18 +45,6 @@ function createGifcards(apiData, gifcardsContainer) {
                 }
             })
         }
-
-        // // newGifcard.setAttribute('style', `width: ${gifcardWidth}; height:${gifcardHeight}; background-image: url(${element.images.downsized.url})`);
-        // newGifcard.setAttribute('style', `background-image: url(${element.images.downsized.url})`);
-        // newGifcard.querySelector('.gifcard-max-gifimg').setAttribute('src', element.images.downsized.url);
-
-        // newGifcard.querySelectorAll('.gifcard-info-user').forEach(k => k.innerText = element.username);
-        // newGifcard.querySelectorAll('.gifcard-info-title').forEach(k => k.innerText = element.title);
-
-        // newGifcard.querySelectorAll('.gifcard-down-link').forEach(k => {
-        //     k.setAttribute('data-href', element.images.original.url);
-        //     k.setAttribute('download', element.title);
-        // });
 
         gifcardsContainer.appendChild(newGifcard);
     });
@@ -93,7 +79,7 @@ function createGifcards(apiData, gifcardsContainer) {
             k.addEventListener('click', (event) => {
                 //Dar like y guardar en favs
                 if (k.classList.contains('fav-inactive')) {
-                    console.log('LIKE!')
+                    // console.log('LIKE!')
                     favGifs.push({
                         id: element.querySelector('#gifId').innerText,
                         username: element.querySelector('.gifcard-info-user').innerText,
@@ -101,22 +87,16 @@ function createGifcards(apiData, gifcardsContainer) {
                         display: element.querySelector('.gifcard-max-gifimg').getAttribute('src'),
                         downlink: element.querySelector('.gifcard-down-link').getAttribute('data-href')
                     });
-                    // console.log(`Gif Id: ${element.querySelector('#gifId').innerText} AGREGADO favs`)
-                    // console.log(favGifs);
                     localStorage.setItem('favGifsStorage', JSON.stringify(favGifs));
-                    // console.log(localStorage.getItem('favGifsStorage'));
 
                     //Quitar like y remover de favs
                 } else if (k.classList.contains('fav-active')) {
-                    console.log('DISLIKE!')
+                    // console.log('DISLIKE!')
                     if (favGifs.length > 0) {
                         for (let i = 0; i < favGifs.length; i++) {
                             if (favGifs[i].id === element.querySelector('#gifId').innerText) {
                                 favGifs.splice(i, 1);
-                                // console.log(`Gif Id: ${element.querySelector('#gifId').innerText} ELIMANDO favs`)
-                                // console.log(favGifs);
                                 localStorage.setItem('favGifsStorage', JSON.stringify(favGifs));
-                                // console.log(localStorage.getItem('favGifsStorage'));
                             }
                         }
                     }
