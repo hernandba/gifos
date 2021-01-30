@@ -1,7 +1,8 @@
 /* -------------------------------------------------------------------------- */
 /*                             FAVS INITIALIZATION                            */
 /* -------------------------------------------------------------------------- */
-let favGifs;
+let favGifs,
+    favGifsResults = document.querySelector('#fav-gifs-results');
 
 if (localStorage.length > 0) {
     console.log('Si habia inf en localStorage');

@@ -1,17 +1,17 @@
 /* -------------------------------------------------------------------------- */
 /*                       GIFCARD CREATION AND FUNCTIONS                       */
 /* -------------------------------------------------------------------------- */
+//Gets gifcard template from document
 let gifCard = document.querySelector('.gifcard');
-
+//
 function createGifcards(apiData, gifcardsContainer) {
     apiData.forEach(element => {
-        let gifId = element.id;
-        let gifUser = element.username;
-        let gifTitle = element.title;
+        let gifId = element.id,
+            gifUser = element.username,
+            gifTitle = element.title;
 
-        let gifDisplay;
-        let gifDownlink;
-        if (typeof(element.images) != 'undefined') {
+        let gifDisplay, gifDownlink;
+        if (typeof (element.images) != 'undefined') {
             gifDisplay = element.images.downsized.url;
             gifDownlink = element.images.original.url;
         } else {
@@ -36,7 +36,7 @@ function createGifcards(apiData, gifcardsContainer) {
             k.setAttribute('data-href', gifDownlink);
             k.setAttribute('download', gifTitle);
         });
-
+        //Change btn-fav state if gifcard is already saved on favGifs LocalStorage
         if (favGifs.length > 0) {
             favGifs.forEach(j => {
                 if (j.id === gifId) {
@@ -45,16 +45,15 @@ function createGifcards(apiData, gifcardsContainer) {
                 }
             })
         }
-
         gifcardsContainer.appendChild(newGifcard);
     });
 
-    /* --------------- AGREGRAR FUNCIONALIDAD A BOTONES DE GIFCARDS -------------- */
-    //Aplica para los gifcards dentro del container seleccionado
+    /* --------------- GIFCARDS BUTTONS FUNCTIONALITIES -------------- */
+    //Applies to gifcards on chosen container
     let gifCards = gifcardsContainer.querySelectorAll('.gifcard');
 
     gifCards.forEach(element => {
-        // Maximizar con toque en gifcard
+        //Fullview when touched
         element.addEventListener('click', (event) => {
             if (element.querySelector('.gifcard-max-container').classList.contains('hide')) {
                 element.querySelector('.gifcard-max-container').classList.remove('hide');
@@ -62,24 +61,24 @@ function createGifcards(apiData, gifcardsContainer) {
             event.stopPropagation();
         });
 
-        //Maximizar con click en btn-max
+        //Fullview click on btn-max
         element.querySelector('.btn-max').addEventListener('click', (event) => {
             element.querySelector('.gifcard-max-container').classList.remove('hide');
             event.stopPropagation();
         });
 
-        //Cerra ventana maximizada con click en btn-close
+        //Close fullview when click on btn-close
         element.querySelector('.btn-close').addEventListener('click', (event) => {
             element.querySelector('.gifcard-max-container').classList.add('hide');
             event.stopPropagation();
         });
 
-        //Guardar/Eliminar de Favoritos
+        //Save/delete from favs
         element.querySelectorAll('.btn-fav').forEach(k => {
             k.addEventListener('click', (event) => {
-                //Dar like y guardar en favs
+                //Actions if liked
                 if (k.classList.contains('fav-inactive')) {
-                    // console.log('LIKE!')
+                    //Save to favGifs LocalStorage
                     favGifs.push({
                         id: element.querySelector('#gifId').innerText,
                         username: element.querySelector('.gifcard-info-user').innerText,
@@ -88,10 +87,14 @@ function createGifcards(apiData, gifcardsContainer) {
                         downlink: element.querySelector('.gifcard-down-link').getAttribute('data-href')
                     });
                     localStorage.setItem('favGifsStorage', JSON.stringify(favGifs));
-
-                    //Quitar like y remover de favs
+                    //Update favs
+                    if (favGifsResults != null) {
+                        console.log('like!')
+                        updateFavs();
+                    }
+                //Actions if unlike
                 } else if (k.classList.contains('fav-active')) {
-                    // console.log('DISLIKE!')
+                    //Update favGifs LocalStorage
                     if (favGifs.length > 0) {
                         for (let i = 0; i < favGifs.length; i++) {
                             if (favGifs[i].id === element.querySelector('#gifId').innerText) {
@@ -100,17 +103,29 @@ function createGifcards(apiData, gifcardsContainer) {
                             }
                         }
                     }
+                    //Update favs and btn-fav state (like/unlike) on equal gifcard of trendings 
+                    if (favGifsResults != null) {
+                        console.log('dislike!')
+                        updateFavs();
+                        // trendingGifsContainer.querySelectorAll('.gifcard').forEach(gifCard => {
+                        //     if (gifCard.querySelector('#gifId').innerText === element.querySelector('#gifId').innerText) {
+                        //         gifCard.querySelectorAll('.btn-fav').forEach(j => j.classList.remove('fav-active'))
+                        //         gifCard.querySelectorAll('.btn-fav').forEach(j => j.classList.add('fav-inactive'))
+                        //     }
+                        // })
+                    }
                 }
+                //Change btn-fav state (like/unlike)
                 element.querySelectorAll('.btn-fav').forEach(j => j.classList.toggle('fav-inactive'))
                 element.querySelectorAll('.btn-fav').forEach(j => j.classList.toggle('fav-active'))
                 event.stopPropagation();
             });
         });
 
-        //Descargar - Se aplica sobre el <a> y no directamente en el boton
+        //Download - Applies on <a> but not on button
         element.querySelectorAll('.gifcard-down-link').forEach(k => {
             k.addEventListener('click', (event) => {
-                //Esto lo encontré en: https://stackoverflow.com/questions/50042406/instant-download-image-on-button-click/50042482
+                //Found on: https://stackoverflow.com/questions/50042406/instant-download-image-on-button-click/50042482
                 var url = k.getAttribute('data-href');
                 var fileName = k.getAttribute('download');
                 var xhr = new XMLHttpRequest();
@@ -123,12 +138,12 @@ function createGifcards(apiData, gifcardsContainer) {
                     tag.href = imageUrl;
                     tag.download = fileName;
                     document.body.appendChild(tag);
-                    tag.addEventListener('click', event => event.stopPropagation());
+                    tag.addEventListener('click', event => event.stopPropagation());//Added by me
                     tag.click();
                     document.body.removeChild(tag);
                 }
                 xhr.send();
-                //-------------------Hasta aquí
+                //-------------------Ends
                 event.preventDefault();
                 event.stopPropagation();
             })
