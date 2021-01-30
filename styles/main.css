@@ -427,7 +427,7 @@ button:hover {
 }
 
 @media (max-width: 639px) {
-  #fav-gifs {
+  .gifs-section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -439,14 +439,14 @@ button:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  #fav-gifs #fav-gifs-title {
+  .gifs-section .gifs-section-title {
     text-align: center;
     padding-bottom: 46px;
   }
-  #fav-gifs #fav-gifs-empty {
+  .gifs-section .gifs-results-empty {
     text-align: center;
   }
-  #fav-gifs #fav-gifs-empty p {
+  .gifs-section .gifs-results-empty p {
     padding: 0 20%;
   }
 }

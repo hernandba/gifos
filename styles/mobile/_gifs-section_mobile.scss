@@ -1,15 +1,15 @@
 @media (max-width: 639px) {
-    #fav-gifs {
+    .gifs-section {
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        #fav-gifs-title {
+        .gifs-section-title {
             text-align: center;
             padding-bottom: 46px;
         }
 
-        #fav-gifs-empty {
+        .gifs-results-empty {
             text-align: center;
 
             p {
