@@ -1,0 +1,8 @@
+/* -------------------------------------------------------------------------- */
+/*                              GIFCARD TEMPLATE                              */
+/* -------------------------------------------------------------------------- */
+// export const gifcardTemplate = document.querySelector('.gifcard');
+const gifcardTemplate = document.createElement('div');
+gifcardTemplate.innerHTML = '<span id="gifId" class="hide"></span><div class="gifcard-overlay"><div class="gifcard-overlay-bar-btns"><button class="btn-fav fav-inactive"></button><a class="gifcard-down-link" href="#" data-href="" download=""><button class="btn-down"><img src="../assets/icon-download-hover.svg" alt="Boton Descargar Gif"></button></a><button class="btn-max"><img src="../assets/icon-max-hover.svg" alt="Boton Maximizar Gif"></button></div><article class="gifcard-info"><h4 class="gifcard-info-user"></h4><h3 class="gifcard-info-title"></h3></article></div><div class="gifcard-max-container hide"><div class="gifcard-max"><button class="btn-close"><img src="../assets/close.svg" alt="Boton Cerrar"></button><img class="gifcard-max-gifimg" src="" alt="Imagen Gif"><div class="gifcard-max-bar"><article class="gifcard-info"><h4 class="gifcard-info-user"></h4><h3 class="gifcard-info-title"></h3></article><div class="gifcard-max-bar-btns"><button class="btn-fav fav-inactive"></button><a class="gifcard-down-link" href="#" data-href="" download=""><button class="btn-down"><img src="../assets/icon-download-hover.svg" alt="Boton Descargar Gif"></button></a></div></div></div></div>';
+// gifcardTemplate.innerHTML = '<object type="text/html" data="../../public/modules/gifcard_template.html"></object>'
+export {gifcardTemplate};

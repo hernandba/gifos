@@ -1,6 +1,8 @@
 /* -------------------------------------------------------------------------- */
 /*                               TRENDING TERMS                               */
 /* -------------------------------------------------------------------------- */
+import {urlApi, api_key, getApiInfo} from './infoAPI.js';
+
 let urlTrendingTerms = `${urlApi}/trending/searches?api_key=${api_key}`;
 let trendingTermsPgraph = document.getElementById('trending-terms-pgraph');
 

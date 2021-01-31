@@ -1,6 +1,8 @@
 /* -------------------------------------------------------------------------- */
 /*                                 SEARCH GIFS                                */
 /* -------------------------------------------------------------------------- */
+import {urlApi, api_key, getApiInfo} from './infoAPI.js';
+import {createGifcards} from './gifcard.js';
 
 /* --------------------------- PREPARE FOR SEARCH --------------------------- */
 function prepareForSearch() {
@@ -37,6 +39,7 @@ function searchForGifs(query) {
 }
 
 /* ------------------------ CREATE SEARCH SUGGESTIONS ----------------------- */
+let urlSrchSuggests = `${urlApi}/gifs/search/tags?api_key=${api_key}&q=`;
 function createSearchSuggestions() {
     srchSuggestList = document.querySelector('#srch-suggest-list');
     if (srchInput.value !== "") {
@@ -91,7 +94,7 @@ let srchQuery, srchOffset,
     srchResultsMoreBtn = document.querySelector('#srch-results-more-btn'),
     srchNoResults = document.querySelector('#srch-no-results');
 
-let srchResultsContainer = document.querySelector('#srch-results-container');
+let srchResultsContainer = document.querySelector('#srch-results-container'),
 srchResultsGifsContainer = document.querySelector('#srch-results-gifs-container');
 
 //CLOSE SEARCH BUTTON (CROSS)

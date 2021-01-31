@@ -1,8 +1,12 @@
 /* -------------------------------------------------------------------------- */
 /*                       GIFCARD CREATION AND FUNCTIONS                       */
 /* -------------------------------------------------------------------------- */
+import {gifcardTemplate} from './modules/gifcard_template.js';
+import {favGifs, favGifsResults} from './favs_init.js';
+import {updateFavs} from './favs.js';
+
 //Gets gifcard template from document
-let gifCard = document.querySelector('.gifcard');
+// let gifCard = document.querySelector('.gifcard');
 //
 function createGifcards(apiData, gifcardsContainer) {
     apiData.forEach(element => {
@@ -21,7 +25,9 @@ function createGifcards(apiData, gifcardsContainer) {
 
         let newGifcard = document.createElement('div');
         newGifcard.setAttribute('class', 'gifcard');
-        newGifcard.innerHTML = gifCard.innerHTML;
+        newGifcard.innerHTML = gifcardTemplate.innerHTML;
+        
+        // newGifcard.innerHTML = gifCard.innerHTML;
 
         newGifcard.querySelector('#gifId').innerText = gifId;
 
@@ -150,3 +156,5 @@ function createGifcards(apiData, gifcardsContainer) {
         })
     })
 }
+
+export {createGifcards};

@@ -11,3 +11,5 @@ if (localStorage.length > 0) {
     console.log('No habia info en localStorage');
     favGifs = [];
 }
+
+export {favGifs, favGifsResults};

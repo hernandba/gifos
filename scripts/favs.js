@@ -1,12 +1,15 @@
 /* -------------------------------------------------------------------------- */
 /*                                  FAV GIFS                                  */
 /* -------------------------------------------------------------------------- */
+import {createGifcards} from './gifcard.js';
+import {favGifs, favGifsResults} from './favs_init.js'
+
 let favGifsEmpty = document.querySelector('#fav-gifs-empty'),
     favGifsMoreBtn = document.querySelector('#fav-gifs-more-btn'),
     trendingGifs = document.querySelector('#trending-gifs-container');
 
 function updateFavs(){
-    if (favGifs.length > 0) {
+    if (favGifs.length > 0 && favGifsResults != null) {
         favGifsResults.innerHTML = "";
         favGifsEmpty.classList.add('hide');
         favGifsResults.classList.remove('hide');
@@ -25,3 +28,4 @@ function updateFavs(){
 
 updateFavs();
 
+export {updateFavs};
