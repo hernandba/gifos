@@ -16,7 +16,7 @@ function updateFavs(){
         } else {
             favGifsMoreBtn.classList.add('hide');
         }
-    } else {
+    } else if(favGifsResults != null){
         favGifsResults.innerHTML = "";
         favGifsResults.classList.add('hide');
         favGifsEmpty.classList.remove('hide');
