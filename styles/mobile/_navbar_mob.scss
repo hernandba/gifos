@@ -1,0 +1,65 @@
+/* ------------------------------ SMALL MOBILE ------------------------------ */
+.desktop {
+    display: none;
+}
+
+#nav-bar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 5px solid $purple;
+
+    .btn-logo {
+        height: 49px;
+        margin-left: 5.9%;
+    }
+
+    .btn-ham {
+        margin-right: 7.2%;
+    }
+
+    #nav-menu {
+        transition: all 0.5s;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 100px;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: $white;
+            position: relative;
+            // z-index: 1;
+            padding: 25px 0;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                margin-left: -20px;
+                width: 40px;
+                border-bottom: 1px solid $white;
+            }
+        }
+
+        .btn-crear{
+            background-image: url(../assets/CTA-crear-gifo-modo-noc.svg);
+        }
+    }
+
+    .nav-menu-hide {
+        left: -100%;
+    }
+
+    .nav-menu-show {
+        left: 0;
+        background-color: rgba($color: $purple, $alpha: 0.9);
+    }
+}

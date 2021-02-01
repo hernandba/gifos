@@ -1,0 +1,30 @@
+#trending-gifs {
+    display: flex;
+    flex-direction: column;
+
+    padding: 67px 0 182px;
+
+    p {
+        padding: 12px 0 53px;
+    }
+
+
+    #trending-gifs-slider {
+        width: 100%;
+        overflow: scroll;
+
+        scroll-behavior: auto;
+        display: flex;
+
+        #trending-gifs-container {
+            display: flex;
+            gap: 29px;
+            padding: 0 94px;
+
+            .gifcard {
+                width: 357px;
+                height: 275px;
+            }
+        }
+    }
+}

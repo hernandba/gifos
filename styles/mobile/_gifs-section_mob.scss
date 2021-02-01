@@ -1,0 +1,18 @@
+.gifs-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .gifs-section-title {
+        text-align: center;
+        padding-bottom: 46px;
+    }
+
+    .gifs-results-empty {
+        text-align: center;
+
+        p {
+            padding: 0 20%;
+        }
+    }
+}

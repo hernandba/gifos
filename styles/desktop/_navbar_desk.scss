@@ -1,0 +1,45 @@
+.mobile {
+    display: none;
+}
+
+#nav-bar {
+    width: 100%;
+    height: 90px;
+    border-top: 5px solid $purple;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 11% 0 11%;
+
+    .btn-ham {
+        display: none;
+    }
+
+    #nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 42px;
+
+        a {
+            text-decoration: none;
+            color: $purple;
+
+            &:hover {
+                text-decoration: underline;
+                text-decoration-thickness: 2px;
+                text-decoration-color: $acqua;
+            }
+
+            &:active{
+                color: $grey;
+            }
+        }
+
+        .btn-crear {
+            background-image: url('../assets/button-crear-gifo.svg');
+            &:hover {
+                background-image: url('../assets/CTA-crear-gifo-hover.svg');
+            }
+        }
+    }
+}

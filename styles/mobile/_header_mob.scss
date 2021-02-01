@@ -1,0 +1,14 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        padding: 7px 11% 31px;
+    }
+
+    img {
+        width: 70%;
+        max-width: 400px;
+    }
+}
