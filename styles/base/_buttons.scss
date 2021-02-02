@@ -28,6 +28,11 @@ button {
     text-transform: uppercase;
     border: 1px solid $purple;
     border-radius: 25px;
+
+    &:hover{
+        color: $white;
+        background-color: $purple;
+    }
 }
 
 .btn-crear{

@@ -1,0 +1,122 @@
+#gifos-create {
+    width: 100%;
+    padding: 4px 0 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #record-general {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        #camera-img {
+            align-self: center;
+            width: 100%;
+            max-width: 123px;
+            min-width: 90px;
+            height: auto;
+            margin-left: 80px;
+
+        }
+        #movie-img {
+            align-self: flex-end;
+            width: 100%;
+            max-width: 142px;
+            min-width: 100px;
+            height: auto;
+            margin-right: 80px;
+        }
+
+        #record-main {
+            width: 100%;
+            max-width: 688px;
+            min-width: 600px;
+            margin: 0 5%;
+
+            #record-frame {
+                padding: 20px;
+                border: 1px solid $purple;
+
+                #inside-corners {
+                    border: 1px solid $acqua;
+                    padding: 17px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    #record-init{
+                        h2{
+                            span{
+                                text-transform: uppercase;
+                                color: $acqua;
+                            }
+                        }
+                    }
+
+                    video {
+                        border: 1px dashed hotpink;
+                        width: 480px;
+                        height: 320px;
+                    }
+                }
+            }
+
+            #record-status-bar {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                padding: 24px 0 19px 0;
+
+                #record-steps {
+                    grid-column: 2 / 3;
+                    justify-self: center;
+                    display: flex;
+                    gap: 26px;
+
+                    .step {
+                        width: 32px;
+                        height: 32px;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        border: 1px solid $purple;
+                        border-radius: 50%;
+                        color: $purple;
+                    }
+
+                    .step-active {
+                        color: $white;
+                        background-color: $purple;
+                    }
+                }
+
+                #record-log {
+                    grid-column: 3 / 4;
+                    justify-self: end;
+                    align-self: center;
+
+                    #record-time {
+                        color: $purple;
+                    }
+
+                    #record-repeat {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+    #line-separator{
+        height: 7px;
+        width: 50%;
+        background-color: $purple;
+        border-radius: 10px;
+    }
+
+    #record-btn{
+        margin-top: 20px;
+    }
+}

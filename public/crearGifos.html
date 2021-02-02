@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS</title>
+    <script src="https://kit.fontawesome.com/f124302576.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+</head>
+
+<body>
+    <nav id="nav-bar">
+        <a href="./index.html" class="btn-logo">
+            <img src="../assets/logo-desktop.svg" alt="Logo GIFOS" class="logo desktop">
+            <img src="../assets/logo-mobile.svg" alt="Logo GIFOS" class="logo mobile">
+        </a>
+        <button class="btn-ham"><img src="../assets/burger.svg" alt="Boton Hamburguesa"></button>
+
+        <div id="nav-menu" class="nav-menu-hide">
+            <a class="main-txt-font link" href="#">Modo Nocturno</a>
+            <a class="main-txt-font link" href="./favs.html">Favoritos</a>
+            <a class="main-txt-font link" href="./misGifos.html">Mis GIFOS</a>
+            <a href="./crearGifos.html">
+                <div class="btn-crear"></div>
+            </a>
+        </div>
+    </nav>
+
+    <section id="gifos-create">
+
+        <div id="record-general">
+            <img id="camera-img" src="../assets/camara.svg" alt="Imagen Camara">
+            <div id="record-main">
+                <div id="record-frame">
+                    <div id="inside-corners">
+                        <div id="record-init" class="">
+                            <h2 class="main-title-font lit-txt-color">Aquí podrás crear tus propios <span>Gifos</span></h2>
+                            <p class="second-txt-font">¡Crea tu GIFO en sólo 3 pasos</p>
+                            <p class="second-txt-font">(sólo necesitas una cámara para grabar un video)</p>
+                        </div>
+                        <div id="record-permission" class="hide">
+                            <h2 class="main-title-font lit-txt-color">¿Nos das acceso a tu cámara?</h2>
+                            <p class="second-txt-font">El acceso a tu cámara será válido sólo por el tiempo en el que estés creando el GIFO.</p>
+                        </div>
+                        <video src="" class="hide"></video>
+                    </div>
+                </div>
+                <div id="record-status-bar">
+                    <div id="record-steps">
+                        <div class="second-txt-font step" id="step1">1</div>
+                        <div class="second-txt-font step" id="step2">2</div>
+                        <div class="second-txt-font step" id="step3">3</div>
+                    </div>
+                    <div id="record-log">
+                        <span id="record-time" class="main-txt-font log">00:00:05</span>
+                        <a id="record-repeat" class="main-txt-font link log hide" href="#">repetir captura</a>
+                    </div>
+                </div>
+            </div>
+            <img id="movie-img" src="../assets/pelicula.svg" alt="Imagen Pelicula">
+        </div>
+        <span id="line-separator"></span>
+        <button id="record-btn" class="more-btn main-title-font lit-txt-color">Comenzar</button>
+
+    </section>
+
+    <footer>
+        <div id="social-share">
+            <h5 class="second-txt-font">Compartir en: </h5>
+            <div id="social-icons">
+                <a href="https://www.facebook.com/"><i class="social-icon fab fa-facebook fa-lg"></i></a>
+                <a href="https://twitter.com/?lang=es"><i class="social-icon fab fa-twitter fa-lg"></i></a>
+                <a href="https://www.instagram.com/"><i class="social-icon fab fa-instagram fa-lg"></i></a>
+            </div>
+        </div>
+        <h5 class="second-txt-font">&copy; GIFOS 2021 All Rights Reserved.</h5>
+    </footer>
+
+    <script type="text/javascript" src="../scripts/menu_mob.js"></script>
+    <script type="text/javascript" src="../scripts/infoAPI.js"></script>
+    <script type="text/javascript" src="../scripts/favs_init.js"></script>
+    <script type="text/javascript" src="../scripts/trendingTerms.js"></script>
+    <script type="text/javascript" src="../scripts/gifcard.js"></script>
+    <script type="text/javascript" src="../scripts/trendingGifs.js"></script>
+    <script type="text/javascript" src="../scripts/searchGifs.js"></script>
+</body>
+
+</html>

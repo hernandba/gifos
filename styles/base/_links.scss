@@ -1,0 +1,14 @@
+.link {
+    text-decoration: none;
+    color: $purple;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-decoration-color: $acqua;
+    }
+
+    &:active {
+        color: $grey;
+    }
+}

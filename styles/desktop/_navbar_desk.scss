@@ -20,21 +20,6 @@
         align-items: center;
         gap: 42px;
 
-        a {
-            text-decoration: none;
-            color: $purple;
-
-            &:hover {
-                text-decoration: underline;
-                text-decoration-thickness: 2px;
-                text-decoration-color: $acqua;
-            }
-
-            &:active{
-                color: $grey;
-            }
-        }
-
         .btn-crear {
             background-image: url('../assets/button-crear-gifo.svg');
             &:hover {
