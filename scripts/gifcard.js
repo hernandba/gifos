@@ -4,8 +4,8 @@
 //Gets gifcard template from document
 let gifCard = document.querySelector('.gifcard');
 //
-function createGifcards(apiData, gifcardsContainer) {
-    apiData.forEach(element => {
+function createGifcards(data, gifcardsContainer) {
+    data.forEach(element => {
         let gifId = element.id,
             gifUser = element.username,
             gifTitle = element.title;

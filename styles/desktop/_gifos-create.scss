@@ -41,11 +41,16 @@
                 #inside-corners {
                     border: 1px solid $acqua;
                     padding: 17px 0;
+                    height: 350px;
+
                     display: flex;
+                    flex-direction: column;
                     justify-content: center;
                     align-items: center;
 
                     #record-init{
+                        width: 450px;
+                        line-height: 30px;
                         h2{
                             span{
                                 text-transform: uppercase;
@@ -54,11 +59,18 @@
                         }
                     }
 
+                    #record-permit{
+                        width: 450px;
+                        line-height: 30px;
+                    }
+
                     video {
-                        border: 1px dashed hotpink;
                         width: 480px;
                         height: 320px;
+                        border: 1px dashed hotpink;
                     }
+
+
                 }
             }
 
@@ -116,7 +128,7 @@
         border-radius: 10px;
     }
 
-    #record-btn{
+    .more-btn{
         margin-top: 20px;
     }
 }

@@ -529,9 +529,14 @@ button:hover {
   #gifos-create #record-general #record-main #record-frame #inside-corners {
     border: 1px solid #5ED7C6;
     padding: 17px 0;
+    height: 350px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -539,14 +544,22 @@ button:hover {
         -ms-flex-align: center;
             align-items: center;
   }
+  #gifos-create #record-general #record-main #record-frame #inside-corners #record-init {
+    width: 450px;
+    line-height: 30px;
+  }
   #gifos-create #record-general #record-main #record-frame #inside-corners #record-init h2 span {
     text-transform: uppercase;
     color: #5ED7C6;
   }
+  #gifos-create #record-general #record-main #record-frame #inside-corners #record-permit {
+    width: 450px;
+    line-height: 30px;
+  }
   #gifos-create #record-general #record-main #record-frame #inside-corners video {
-    border: 1px dashed hotpink;
     width: 480px;
     height: 320px;
+    border: 1px dashed hotpink;
   }
   #gifos-create #record-general #record-main #record-status-bar {
     display: -ms-grid;
@@ -607,7 +620,7 @@ button:hover {
     background-color: #572EE5;
     border-radius: 10px;
   }
-  #gifos-create #record-btn {
+  #gifos-create .more-btn {
     margin-top: 20px;
   }
   footer {
