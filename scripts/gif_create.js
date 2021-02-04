@@ -12,13 +12,18 @@ let recordInit = document.querySelector('#record-init'),
     stopBtn = document.querySelector('#stop-btn'),
     uploadBtn = document.querySelector('#upload-btn');
 
+let recorder;
+let timeInterval;
+
 /* ------------------------------ START BUTTON ----------------------------- */
 startBtn.addEventListener('click', event => {
     recordInit.classList.add('hide');
     recordPermit.classList.remove('hide');
     startBtn.classList.add('hide');
     recordSteps[0].classList.add('step-active');
+
     getStreamAndRecord();
+
     event.stopPropagation();
 });
 
@@ -27,8 +32,40 @@ recordBtn.addEventListener('click', event => {
     recordBtn.classList.add('hide');
     stopBtn.classList.remove('hide');
     recordTime.classList.remove('hide');
+
+    // console.log(recorder);
+    // recorder.startRecording();
+    recordTime.innerHTML = '00:00:00';
+    timeInterval = setInterval(timer, 1000);
+
     event.stopPropagation();
 });
+
+let seconds = '00', minutes = '00', hours = '00';
+
+function timer(){
+    if(seconds < 59){
+        seconds++;
+        if(seconds < 10){
+            seconds = '0'+seconds;
+        }
+    }else{
+        seconds = '00';
+        if(minutes < 59){
+            minutes++;
+            if(minutes < 10){
+                minutes = '0'+minutes;
+            }
+        }else{
+            minutes = '00';
+            hours++;
+            if(hours < 10){
+                hours = '0'+hours; 
+            }
+        }
+    }
+    recordTime.innerHTML = `${hours}:${minutes}:${seconds}`;
+}
 
 /* ------------------------------- STOP BUTTON ------------------------------ */
 stopBtn.addEventListener('click', event => {
@@ -48,6 +85,8 @@ uploadBtn.addEventListener('click', event => {
     event.stopPropagation();
 })
 
+
+
 function getStreamAndRecord(){
     navigator.mediaDevices.getUserMedia({
         audio: false,
@@ -64,6 +103,17 @@ function getStreamAndRecord(){
         video.classList.remove('hide');
         video.srcObject = stream;
         video.play()
+
+        recorder = RecordRTC(stream, {
+            type: 'gif',
+            frameRate: 1,
+            quality: 10,
+            width: 360,
+            hidden: 240,
+            onGifRecordingStarted: () => {console.log('recording started')}
+        });
+
+        // console.log(recorder);
     });
 }
 
