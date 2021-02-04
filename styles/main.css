@@ -545,7 +545,7 @@ button:hover {
             align-items: center;
   }
   #gifos-create #record-general #record-main #record-frame #inside-corners #record-init {
-    width: 450px;
+    width: 480px;
     line-height: 30px;
   }
   #gifos-create #record-general #record-main #record-frame #inside-corners #record-init h2 span {
@@ -553,13 +553,79 @@ button:hover {
     color: #5ED7C6;
   }
   #gifos-create #record-general #record-main #record-frame #inside-corners #record-permit {
-    width: 450px;
+    width: 480px;
     line-height: 30px;
   }
   #gifos-create #record-general #record-main #record-frame #inside-corners video {
     width: 480px;
     height: 320px;
     border: 1px dashed hotpink;
+  }
+  #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif {
+    width: 420px;
+    height: 320px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(87, 46, 229, 0.8);
+    padding: 11px 12px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay .raw-overlay-info {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay .raw-overlay-info img {
+    width: 24px;
+    height: 24px;
+  }
+  #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay .raw-overlay-info p {
+    color: #FFFFFF;
+    margin-top: 10px;
+  }
+  #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay .raw-overlay-btns {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    gap: 11px;
+  }
+  #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay .raw-overlay-btns button {
+    opacity: 0.4;
+  }
+  #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay .raw-overlay-btns button:hover {
+    opacity: 1;
   }
   #gifos-create #record-general #record-main #record-status-bar {
     display: -ms-grid;

@@ -19,6 +19,7 @@
             margin-left: 80px;
 
         }
+
         #movie-img {
             align-self: flex-end;
             width: 100%;
@@ -48,19 +49,20 @@
                     justify-content: center;
                     align-items: center;
 
-                    #record-init{
-                        width: 450px;
+                    #record-init {
+                        width: 480px;
                         line-height: 30px;
-                        h2{
-                            span{
+
+                        h2 {
+                            span {
                                 text-transform: uppercase;
                                 color: $acqua;
                             }
                         }
                     }
 
-                    #record-permit{
-                        width: 450px;
+                    #record-permit {
+                        width: 480px;
                         line-height: 30px;
                     }
 
@@ -70,7 +72,60 @@
                         border: 1px dashed hotpink;
                     }
 
+                    #raw-gif {
+                        width: 420px;
+                        height: 320px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
 
+                        .raw-overlay {
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba($color: $purple, $alpha: 0.8);
+                            padding: 11px 12px;
+                            display: grid;
+                            grid-template-columns: 1fr 2fr 1fr;
+                            grid-template-rows: 1fr;
+                            
+                            .raw-overlay-info{
+                                grid-column: 2 / 3;
+                                grid-row: 1 / 2;
+
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+
+                                img{
+                                    width: 24px;
+                                    height: 24px;
+                                }
+
+                                p{
+                                    color: $white;
+                                    margin-top: 10px;
+                                }
+                                
+                            }
+                            
+                            .raw-overlay-btns {
+                                grid-column: 3 / 4;
+                                display: flex;
+                                justify-content: flex-end;
+                                gap: 11px;
+
+                                button {
+                                    opacity: 0.4;
+
+                                    &:hover {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
                 }
             }
 
@@ -121,14 +176,14 @@
         }
     }
 
-    #line-separator{
+    #line-separator {
         height: 7px;
         width: 50%;
         background-color: $purple;
         border-radius: 10px;
     }
 
-    .more-btn{
+    .more-btn {
         margin-top: 20px;
     }
 }
