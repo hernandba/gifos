@@ -153,10 +153,12 @@ uploadBtn.addEventListener('click', event => {
 
     rawGif.querySelector('#loading-gif').classList.replace('hide', 'raw-overlay')
 
-    setTimeout(() => {
-        rawGif.querySelector('#loading-gif').classList.replace('raw-overlay', 'hide')
-        rawGif.querySelector('#uploaded-gif').classList.replace('hide', 'raw-overlay')
-    }, 3000);
+    subirAGiphy();
+
+    // setTimeout(() => {
+    //     rawGif.querySelector('#loading-gif').classList.replace('raw-overlay', 'hide')
+    //     rawGif.querySelector('#uploaded-gif').classList.replace('hide', 'raw-overlay')
+    // }, 3000);
 
     uploadBtn.classList.add('hide');
     event.stopPropagation();
@@ -164,7 +166,7 @@ uploadBtn.addEventListener('click', event => {
 
 function subirAGiphy() {
     let formData = new FormData();
-    formData.append('file', recordRTC.getBlob(), 'myGif.gif');
+    formData.append('file', blob, `myGif${myGifs.length}.gif`);
     let finalGif = formData.get('file');
     console.log(finalGif);
 
@@ -173,8 +175,44 @@ function subirAGiphy() {
             body: formData
         })
         .then(res => res.json())
-        .then(data => console.log(data));
+        .then(data => {
+            let uploadedGifId = data.data.id;
 
-    // .then(data => localStorage.setItem('favoritos' + cantidadFavoritosGuardados, data.data.id));
-    console.log("Gif subido con éxito");
+            myGifs.push(uploadedGifId);
+            localStorage.setItem('myGifsStorage', JSON.stringify(myGifs));
+
+            rawGif.querySelector('.raw-down-link').setAttribute('data-href', `https://media1.giphy.com/media/${uploadedGifId}/giphy.gif`);
+            rawGif.querySelector('.raw-down-link').setAttribute('download', `myGif${myGifs.length}`);
+            rawGif.querySelector('.raw-down-link').addEventListener('click', event => {
+                //Found on: https://stackoverflow.com/questions/50042406/instant-download-image-on-button-click/50042482
+                var url = rawGif.querySelector('.raw-down-link').getAttribute('data-href');
+                var fileName = rawGif.querySelector('.raw-down-link').getAttribute('download');
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", url, true);
+                xhr.responseType = "blob";
+                xhr.onload = function () {
+                    var urlCreator = window.URL || window.webkitURL;
+                    var imageUrl = urlCreator.createObjectURL(this.response);
+                    var tag = document.createElement('a');
+                    tag.href = imageUrl;
+                    tag.download = fileName;
+                    document.body.appendChild(tag);
+                    tag.addEventListener('click', event => event.stopPropagation());//Added by me
+                    tag.click();
+                    document.body.removeChild(tag);
+                }
+                xhr.send();
+                //-------------------Ends
+                event.preventDefault();
+                event.stopPropagation();
+            });
+
+            rawGif.querySelector('.raw-link').setAttribute('href', `https://giphy.com/gifs/${uploadedGifId}`);
+
+            rawGif.querySelector('#loading-gif').classList.replace('raw-overlay', 'hide')
+            rawGif.querySelector('#uploaded-gif').classList.replace('hide', 'raw-overlay')
+
+            console.log(data);
+            console.log("Gif subido con éxito");
+        }).catch(console.error);
 }

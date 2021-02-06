@@ -621,6 +621,10 @@ button:hover {
             justify-content: flex-end;
     gap: 11px;
   }
+  #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay .raw-overlay-btns a {
+    width: 32px;
+    height: 32px;
+  }
   #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay .raw-overlay-btns button {
     opacity: 0.4;
   }

@@ -16,7 +16,7 @@ function createGifcards(data, gifcardsContainer) {
             gifDownlink = element.images.original.url;
         } else {
             gifDisplay = element.display;
-            gifDownlink = element.downlink;;
+            gifDownlink = element.downlink;
         }
 
         let newGifcard = document.createElement('div');

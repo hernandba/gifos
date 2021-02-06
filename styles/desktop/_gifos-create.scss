@@ -114,6 +114,11 @@
                                 display: flex;
                                 justify-content: flex-end;
                                 gap: 11px;
+                                
+                                a{
+                                    width: 32px;
+                                    height: 32px;
+                                }
 
                                 button {
                                     opacity: 0.4;
