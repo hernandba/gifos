@@ -103,6 +103,10 @@ button:hover {
   background-color: #FFFFFF;
 }
 
+.trash {
+  background-image: url(../assets/icon-trash-hover.svg);
+}
+
 .more-btn {
   padding: 18px 32px;
   margin-top: 78px;

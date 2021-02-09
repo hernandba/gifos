@@ -45,6 +45,14 @@ function createGifcards(data, gifcardsContainer) {
                 }
             })
         }
+        //Change btn-fav icon to trash if gifcard is already saved on myGifs LocalStorage
+        if (myGifs.length > 0) {
+            myGifs.forEach(i => {
+                if (i.id === gifId) {
+                    newGifcard.querySelectorAll('.btn-fav').forEach(m => m.classList.replace('fav-inactive', 'trash'));
+                }
+            });
+        }
         gifcardsContainer.appendChild(newGifcard);
     });
 
@@ -92,7 +100,7 @@ function createGifcards(data, gifcardsContainer) {
                         console.log('like!')
                         updateFavs();
                     }
-                //Actions if unlike
+                    //Actions if unlike
                 } else if (k.classList.contains('fav-active')) {
                     //Update favGifs LocalStorage
                     if (favGifs.length > 0) {
@@ -113,6 +121,20 @@ function createGifcards(data, gifcardsContainer) {
                         //         gifCard.querySelectorAll('.btn-fav').forEach(j => j.classList.add('fav-inactive'))
                         //     }
                         // })
+                    }
+                    //Actions if 
+                } else if (k.classList.contains('trash')) {
+                    if (myGifs.length > 0) {
+                        for (let i = 0; i < myGifs.length; i++) {
+                            if (myGifs[i].id === element.querySelector('#gifId').innerText) {
+                                myGifs.splice(i, 1);
+                                localStorage.setItem('myGifsStorage', JSON.stringify(myGifs));
+                            }
+                        }
+                    }
+                    if (myGifsResults != null) {
+                        console.log('actualizo mis gifos')
+                        updateMyGifs();
                     }
                 }
                 //Change btn-fav state (like/unlike)
@@ -138,7 +160,7 @@ function createGifcards(data, gifcardsContainer) {
                     tag.href = imageUrl;
                     tag.download = fileName;
                     document.body.appendChild(tag);
-                    tag.addEventListener('click', event => event.stopPropagation());//Added by me
+                    tag.addEventListener('click', event => event.stopPropagation()); //Added by me
                     tag.click();
                     document.body.removeChild(tag);
                 }

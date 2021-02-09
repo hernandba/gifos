@@ -178,7 +178,13 @@ function subirAGiphy() {
         .then(data => {
             let uploadedGifId = data.data.id;
 
-            myGifs.push(uploadedGifId);
+            myGifs.push({
+                id: uploadedGifId,
+                username: '',
+                title: `myGif${myGifs.length}`,
+                display: `https://media1.giphy.com/media/${uploadedGifId}/giphy.gif`,
+                downlink: `https://media1.giphy.com/media/${uploadedGifId}/giphy.gif`
+            });
             localStorage.setItem('myGifsStorage', JSON.stringify(myGifs));
 
             rawGif.querySelector('.raw-down-link').setAttribute('data-href', `https://media1.giphy.com/media/${uploadedGifId}/giphy.gif`);

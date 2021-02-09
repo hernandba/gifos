@@ -4,8 +4,6 @@
 let myGifsEmpty = document.querySelector('#my-gifs-empty'),
     myGifsMoreBtn = document.querySelector('#my-gifs-more-btn');
 
-let mygifcard = document.querySelector('.gifcard');
-
 function updateMyGifs() {
     if (myGifsResults != null) {
         if (myGifs.length > 0) {
@@ -13,10 +11,11 @@ function updateMyGifs() {
             myGifsEmpty.classList.add('hide');
             myGifsResults.classList.remove('hide');
             
-            getApiInfo(`${urlApi}/gifs?api_key=${api_key}&ids=${myGifs}`).then(data => {
-                console.log(data);
-                createGifcards(data, myGifsResults);
-            })
+            // getApiInfo(`${urlApi}/gifs?api_key=${api_key}&ids=${myGifs}`).then(data => {
+            //     console.log(data);
+            //     createGifcards(data, myGifsResults);
+            // })
+            createGifcards(myGifs, myGifsResults);
 
             if (myGifs.length > 12) {
                 myGifsMoreBtn.classList.remove('hide');
