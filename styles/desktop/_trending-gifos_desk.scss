@@ -8,23 +8,52 @@
         padding: 12px 0 53px;
     }
 
-
-    #trending-gifs-slider {
+    #slider-container{
         width: 100%;
-        overflow: scroll;
-
-        scroll-behavior: auto;
+        // padding: 0 94px;
         display: flex;
+        justify-content: center;
+        align-items: center;
 
-        #trending-gifs-container {
-            display: flex;
-            gap: 29px;
-            padding: 0 94px;
+        button{
+            width: 40px;
+            height: 40px;
+        }
 
-            .gifcard {
-                width: 357px;
-                height: 275px;
+        .arrow-left{
+            background-image: url('../assets/button-slider-left.svg');
+
+            &:hover{
+                background-image: url('../assets/button-slider-left-hover.svg');
             }
         }
+
+        .arrow-right{
+            background-image: url('../assets/Button-Slider-right.svg');
+            &:hover{
+                background-image: url('../assets/Button-Slider-right-hover.svg');
+            }
+        }
+
+        #trending-gifs-slider {
+            width: 80%;
+            margin: 0 22px;
+            overflow: scroll;
+
+            scroll-behavior: smooth;
+            display: flex;
+
+            #trending-gifs-container {
+                display: flex;
+                gap: 29px;
+                // padding: 0 94px;
+
+                .gifcard {
+                    width: 357px;
+                    height: 275px;
+                }
+            }
+        }
+
     }
 }

@@ -8,22 +8,26 @@
         padding: 7px 20% 32px;
     }
 
+    #slider-container {
+        button{
+            display: none;
+        }
+        #trending-gifs-slider {
+            width: 100%;
+            overflow: scroll;
 
-    #trending-gifs-slider {
-        width: 100%;
-        overflow: scroll;
-
-        scroll-behavior: auto;
-        display: flex;
-
-        #trending-gifs-container {
+            scroll-behavior: auto;
             display: flex;
-            gap: 22px;
-            padding: 0 22px;
 
-            .gifcard {
-                width: 243px;
-                height: 187px;
+            #trending-gifs-container {
+                display: flex;
+                gap: 22px;
+                padding: 0 22px;
+
+                .gifcard {
+                    width: 243px;
+                    height: 187px;
+                }
             }
         }
     }

@@ -92,6 +92,9 @@ button:hover {
 }
 
 .fav-inactive {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
   background-image: url(/PROYECTOS/GIFOS/assets/icon-fav-hover.svg);
 }
 
@@ -459,22 +462,50 @@ button:hover {
   #trending-gifs p {
     padding: 12px 0 53px;
   }
-  #trending-gifs #trending-gifs-slider {
+  #trending-gifs #slider-container {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #trending-gifs #slider-container button {
+    width: 40px;
+    height: 40px;
+  }
+  #trending-gifs #slider-container .arrow-left {
+    background-image: url("../assets/button-slider-left.svg");
+  }
+  #trending-gifs #slider-container .arrow-left:hover {
+    background-image: url("../assets/button-slider-left-hover.svg");
+  }
+  #trending-gifs #slider-container .arrow-right {
+    background-image: url("../assets/Button-Slider-right.svg");
+  }
+  #trending-gifs #slider-container .arrow-right:hover {
+    background-image: url("../assets/Button-Slider-right-hover.svg");
+  }
+  #trending-gifs #slider-container #trending-gifs-slider {
+    width: 80%;
+    margin: 0 22px;
     overflow: scroll;
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  #trending-gifs #trending-gifs-slider #trending-gifs-container {
+  #trending-gifs #slider-container #trending-gifs-slider #trending-gifs-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 29px;
-    padding: 0 94px;
   }
-  #trending-gifs #trending-gifs-slider #trending-gifs-container .gifcard {
+  #trending-gifs #slider-container #trending-gifs-slider #trending-gifs-container .gifcard {
     width: 357px;
     height: 275px;
   }
@@ -966,7 +997,10 @@ button:hover {
   #trending-gifs p {
     padding: 7px 20% 32px;
   }
-  #trending-gifs #trending-gifs-slider {
+  #trending-gifs #slider-container button {
+    display: none;
+  }
+  #trending-gifs #slider-container #trending-gifs-slider {
     width: 100%;
     overflow: scroll;
     scroll-behavior: auto;
@@ -974,14 +1008,14 @@ button:hover {
     display: -ms-flexbox;
     display: flex;
   }
-  #trending-gifs #trending-gifs-slider #trending-gifs-container {
+  #trending-gifs #slider-container #trending-gifs-slider #trending-gifs-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 22px;
     padding: 0 22px;
   }
-  #trending-gifs #trending-gifs-slider #trending-gifs-container .gifcard {
+  #trending-gifs #slider-container #trending-gifs-slider #trending-gifs-container .gifcard {
     width: 243px;
     height: 187px;
   }
