@@ -9,23 +9,21 @@
     <link rel="stylesheet" type="text/css" href="../styles/main.css">
 </head>
 
-<body>
-    <nav id="nav-bar">
-        <a href="./index.html" class="btn-logo">
-            <img src="../assets/logo-desktop.svg" alt="Logo GIFOS" class="logo desktop">
-            <img src="../assets/logo-mobile.svg" alt="Logo GIFOS" class="logo mobile">
-        </a>
+<body class="light-mode">
+    <nav id="nav-bar" class="light-mode">
+        <a href="./index.html" class="btn-logo desktop light-mode"></a>
+        <a href="./index.html" class="btn-logo mobile light-mode"></a>
         <button class="btn-ham"><img src="../assets/burger.svg" alt="Boton Hamburguesa"></button>
 
         <div id="nav-menu" class="nav-menu-hide">
-            <a class="main-txt-font link" href="#">Modo Nocturno</a>
-            <a class="main-txt-font link" href="./favs.html">Favoritos</a>
-            <a class="main-txt-font link" href="./misGifos.html">Mis GIFOS</a>
-            <a href="./crearGifos.html"><div class="btn-crear"></div></a>
+            <a id="dark-mode-btn" class="main-txt-font link light-mode" href="#">Modo Nocturno</a>
+            <a class="main-txt-font link light-mode" href="./favs.html">Favoritos</a>
+            <a class="main-txt-font link light-mode" href="./misGifos.html">Mis GIFOS</a>
+            <a href="./crearGifos.html"><div class="btn-crear light-mode"></div></a>
         </div>
     </nav>
 
-    <header>
+    <header class="light-mode">
         <h1 class="main-title-font lit-txt-color">Inspírate, busca, guarda y crea los mejores <span
                 class="txt-accent">GIFOS</span></h1>
         <img src="../assets/ilustra_header.svg" alt="Ilustración de Bienvenida">
@@ -71,7 +69,7 @@
         </div>
     </section>
 
-    <section id="trending-gifs">
+    <section id="trending-gifs" class="light-mode">
         <h2 class="main-title-font lit-txt-color">Trending GIFOS</h2>
         <p class="second-txt-font">Mira los últimos GIFOS de nuestra comunidad.</p>
 
@@ -122,7 +120,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="light-mode">
         <div id="social-share">
             <h5 class="second-txt-font">Compartir en: </h5>
             <div id="social-icons">
@@ -135,6 +133,7 @@
     </footer>
 
     <script type="text/javascript" src="../scripts/menu_mob.js"></script>
+    <script type="text/javascript" src="../scripts/darkMode.js"></script>
     <script type="text/javascript" src="../scripts/infoAPI.js"></script>
     <script type="text/javascript" src="../scripts/myGifs_init.js"></script>
     <script type="text/javascript" src="../scripts/favs_init.js"></script>

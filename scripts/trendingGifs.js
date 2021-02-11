@@ -8,7 +8,6 @@ let trendingGifsContainer = document.querySelector('#trending-gifs-container')
 
 let scrollSize;
 trendingGifsSlider.scrollLeft = 0;
-console.log(trendingGifsSlider.style)
 
 getApiInfo(urlTrendingGifs).then(data => {
     createGifcards(data, trendingGifsContainer);

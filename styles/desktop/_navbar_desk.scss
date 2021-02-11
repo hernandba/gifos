@@ -1,15 +1,19 @@
-.mobile {
-    display: none;
-}
-
 #nav-bar {
     width: 100%;
     height: 90px;
-    border-top: 5px solid $purple;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 11% 0 11%;
+
+    .btn-logo{
+        width: 63px;
+        height: 59px;
+
+        &.mobile{
+            display: none;
+        }
+    }
 
     .btn-ham {
         display: none;
@@ -19,12 +23,5 @@
         display: flex;
         align-items: center;
         gap: 42px;
-
-        .btn-crear {
-            background-image: url('../assets/button-crear-gifo.svg');
-            &:hover {
-                background-image: url('../assets/CTA-crear-gifo-hover.svg');
-            }
-        }
     }
 }

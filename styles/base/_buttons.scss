@@ -9,14 +9,14 @@ button {
     }
 }
 
-.fav-inactive{
+.fav-inactive {
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
     background-image: url(/PROYECTOS/GIFOS/assets/icon-fav-hover.svg);
 }
 
-.fav-active{
+.fav-active {
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -24,7 +24,7 @@ button {
     background-color: $white;
 }
 
-.trash{
+.trash {
     background-image: url(../assets/icon-trash-hover.svg);
 }
 
@@ -36,13 +36,14 @@ button {
     border: 1px solid $purple;
     border-radius: 25px;
 
-    &:hover{
+    &:hover {
         color: $white;
         background-color: $purple;
     }
 }
 
-.btn-crear{
+.btn-crear {
     width: 54px;
     height: 54px;
+
 }

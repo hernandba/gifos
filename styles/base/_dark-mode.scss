@@ -1,0 +1,71 @@
+body{
+    &.dark-mode{
+        background-color: $medium-grey;
+    }
+}
+
+#nav-bar{
+    &.light-mode{
+        border-top: 5px solid $purple;
+    }
+    &.dark-mode {
+        border-top: 5px solid black;
+    }
+
+    .btn-logo{
+        &.desktop{
+            &.light-mode{
+                background-image: url('../assets/logo-desktop.svg');
+            }
+            &.dark-mode{
+                background-image: url('../assets/logo-desktop-noc.svg');
+            }
+        }
+
+        &.mobile{
+            &.light-mode{
+                background-image: url('../assets/logo-mobile.svg');
+            }
+            &.dark-mode{
+                background-image: url('../assets/logo-mobile-noc.svg');
+            }
+        }
+    }
+
+    .btn-crear{
+        &.light-mode {
+            background-image: url('../assets/button-crear-gifo.svg');
+            &:hover {
+                background-image: url('../assets/CTA-crear-gifo-hover.svg');
+            }
+            &:active{
+                background-image: url('../assets/CTA-crear-gifo-active.svg');
+            }
+        }
+
+        &.dark-mode{
+            background-image: url('../assets/CTA-crear-gifo-modo-noc.svg');
+            &:hover {
+                background-image: url('../assets/CTA-crear-gifo-hover-modo-noc.svg');
+            }
+            &:active{
+                background-image: url('../assets/CTA-crear-gifo-active-modo-noc.svg');
+            }
+        }
+    }
+}
+
+#trending-gifs{
+    &.dark-mode{
+        background-color: $dark-grey;
+    }
+}
+
+footer{
+    &.light-mode{
+        border-bottom: 5px solid $purple;
+    }
+    &.dark-mode{
+        border-bottom: 5px solid black;
+    }
+}
