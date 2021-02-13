@@ -85,7 +85,6 @@ let srchBar = document.querySelector('#srch-bar'),
 let srchSuggestList = document.querySelector('#srch-suggest-list'),
     srchSuggest = document.querySelector('.srch-suggest'),
     allSrchSuggestions;
-srchSuggestList.removeChild(srchSuggest);
 
 let srchQuery, srchOffset,
     srchResultsMoreBtn = document.querySelector('#srch-results-more-btn'),

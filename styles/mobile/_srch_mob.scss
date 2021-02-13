@@ -18,20 +18,12 @@
             display: flex;
             justify-content: space-between;
 
-            button {
-                width: 24px;
-                height: 24px;
-
-                :hover {
-                    cursor: pointer;
-                }
-            }
-
             #srch-input {
                 font-size: 16px;
                 padding-left: 37px;
                 border: none;
                 outline: none;
+                background-color: transparent;
             }
         }
 

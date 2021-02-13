@@ -16,8 +16,30 @@
         }
     }
 
-    .btn-ham {
+    .btn-ham, .btn-ham-close{
+        width: 14px;
+        height: 14px;
         margin-right: 7.2%;
+    }
+
+    .btn-ham {
+        &.light-mode{
+            background-image: url('../assets/burger.svg') ;
+        }
+
+        &.dark-mode{
+            background-image: url('../assets/burger-modo-noct.svg');
+        }
+    }
+
+    .btn-ham-close {
+        &.light-mode {
+            background-image: url('../assets/close.svg');
+        }
+
+        &.dark-mode {
+            background-image: url('../assets/close-modo-noct.svg');
+        }
     }
 
     #nav-menu {
@@ -60,6 +82,11 @@
 
     .nav-menu-show {
         left: 0;
-        background-color: rgba($color: $purple, $alpha: 0.9);
+        &.light-mode{    
+            background-color: rgba($color: $purple, $alpha: 0.9);
+        }
+        &.dark-mode{
+            background-color: black;
+        }
     }
 }

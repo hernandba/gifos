@@ -7,9 +7,9 @@ let trendingTermsPgraph = document.getElementById('trending-terms-pgraph');
 getApiInfo(urlTrendingTerms).then(data => {
     for (var i = 0; i < 5; i++) {
         if (i < 4) {
-            trendingTermsPgraph.innerHTML += '<a href="#" class="link">' + data[i].charAt(0).toUpperCase() + data[i].slice(1) + '</a>, ';
+            trendingTermsPgraph.innerHTML += '<a href="#" class="link light-mode">' + data[i].charAt(0).toUpperCase() + data[i].slice(1) + '</a>, ';
         } else {
-            trendingTermsPgraph.innerHTML += '<a href="#" class="link">' + data[i].charAt(0).toUpperCase() + data[i].slice(1) + '</a>.';
+            trendingTermsPgraph.innerHTML += '<a href="#" class="link light-mode">' + data[i].charAt(0).toUpperCase() + data[i].slice(1) + '</a>.';
         }
     }
 

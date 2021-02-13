@@ -9,9 +9,10 @@
     }
 
     #slider-container {
-        button{
+        .arrow{
             display: none;
         }
+        
         #trending-gifs-slider {
             width: 100%;
             overflow: scroll;

@@ -1,4 +1,7 @@
 button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     transition: all 0.2s;
     border: none;
     background-color: transparent;
@@ -9,18 +12,24 @@ button {
     }
 }
 
+#srch-field{
+    button {
+        width: 20px;
+        height: 20px;
+
+        :hover {
+            cursor: pointer;
+        }
+    }
+}
+
 .fav-inactive {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-image: url(/PROYECTOS/GIFOS/assets/icon-fav-hover.svg);
+    background-image: url(../assets/icon-fav-hover.svg);
 }
 
 .fav-active {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-image: url(/PROYECTOS/GIFOS/assets/icon-fav-active.svg);
+    background-size:auto;
+    background-image: url(../assets/icon-fav-active.svg);
     background-color: $white;
 }
 
@@ -33,17 +42,10 @@ button {
     margin-top: 78px;
     font-size: 13px;
     text-transform: uppercase;
-    border: 1px solid $purple;
     border-radius: 25px;
-
-    &:hover {
-        color: $white;
-        background-color: $purple;
-    }
 }
 
 .btn-crear {
     width: 54px;
     height: 54px;
-
 }

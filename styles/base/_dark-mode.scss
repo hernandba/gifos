@@ -1,71 +1,214 @@
-body{
-    &.dark-mode{
+body {
+    &.dark-mode {
         background-color: $medium-grey;
     }
 }
 
-#nav-bar{
-    &.light-mode{
+#nav-bar {
+    &.light-mode {
         border-top: 5px solid $purple;
     }
+
     &.dark-mode {
         border-top: 5px solid black;
     }
 
-    .btn-logo{
-        &.desktop{
-            &.light-mode{
+    .btn-logo {
+        &.desktop {
+            &.light-mode {
                 background-image: url('../assets/logo-desktop.svg');
             }
-            &.dark-mode{
+
+            &.dark-mode {
                 background-image: url('../assets/logo-desktop-noc.svg');
             }
         }
 
-        &.mobile{
-            &.light-mode{
+        &.mobile {
+            &.light-mode {
                 background-image: url('../assets/logo-mobile.svg');
             }
-            &.dark-mode{
+
+            &.dark-mode {
                 background-image: url('../assets/logo-mobile-noc.svg');
             }
         }
     }
 
-    .btn-crear{
+    .btn-crear {
         &.light-mode {
             background-image: url('../assets/button-crear-gifo.svg');
+
             &:hover {
                 background-image: url('../assets/CTA-crear-gifo-hover.svg');
             }
-            &:active{
+
+            &:active {
                 background-image: url('../assets/CTA-crear-gifo-active.svg');
             }
         }
 
-        &.dark-mode{
+        &.dark-mode {
             background-image: url('../assets/CTA-crear-gifo-modo-noc.svg');
+
             &:hover {
                 background-image: url('../assets/CTA-crear-gifo-hover-modo-noc.svg');
             }
-            &:active{
+
+            &:active {
                 background-image: url('../assets/CTA-crear-gifo-active-modo-noc.svg');
             }
         }
     }
 }
 
-#trending-gifs{
-    &.dark-mode{
-        background-color: $dark-grey;
+#srch {
+    #srch-bar {
+        &.light-mode {
+            border: 1px solid $purple;
+        }
+
+        &.dark-mode {
+            border: 1px solid $white;
+        }
+
+        #srch-field {
+            #srch-input {
+                &.dark-mode {
+                    color: $white;
+                }
+            }
+
+            #srch-btn {
+                &.light-mode {
+                    background-image: url('../assets/icon-search.svg');
+                }
+
+                &.dark-mode {
+                    background-image: url('../assets/icon-search-modo-noct.svg');
+                }
+            }
+
+            #srch-close-btn {
+                &.light-mode {
+                    background-image: url('../assets/close.svg');
+                }
+
+                &.dark-mode {
+                    background-image: url('../assets/close-modo-noct.svg');
+                }
+            }
+        }
+
+        #srch-suggest-list {
+            .srch-suggest {
+                #srch-icon {
+                    background-repeat: no-repeat;
+                    background-size: auto;
+
+                    &.light-mode {
+                        background-image: url('../assets/icon-search.svg');
+                    }
+
+                    &.dark-mode {
+                        background-image: url('../assets/icon-search-modo-noct.svg');
+                    }
+                }
+            }
+        }
     }
 }
 
-footer{
-    &.light-mode{
+.more-btn {
+    &.light-mode {
+        border: 1px solid $purple;
+
+        &:hover {
+            color: $white;
+            background-color: $purple;
+        }
+    }
+
+    &.dark-mode {
+        border: 1px solid $white;
+
+        &:hover {
+            color: $medium-grey;
+            background-color: $white;
+        }
+    }
+}
+
+.second-txt-font {
+    &.dark-mode {
+        color: $white;
+    }
+}
+
+#trending-gifs {
+    &.dark-mode {
+        background-color: $dark-grey;
+    }
+
+    .arrow {
+        &.arrow-left {
+            &.light-mode {
+                background-image: url('../assets/button-slider-left.svg');
+
+                &:hover {
+                    background-image: url('../assets/button-slider-left-hover.svg');
+                }
+            }
+
+            &.dark-mode {
+                background-image: url('../assets/button-slider-left-md-noct.svg');
+
+                &:hover {
+                    background-image: url('../assets/button-slider-left-md-noct-hover.svg');
+                }
+            }
+        }
+
+        &.arrow-right {
+            &.light-mode {
+                background-image: url('../assets/Button-Slider-right.svg');
+
+                &:hover {
+                    background-image: url('../assets/Button-Slider-right-hover.svg');
+                }
+            }
+
+            &.dark-mode {
+                background-image: url('../assets/button-slider-right-md-noct.svg');
+
+                &:hover {
+                    background-image: url('../assets/button-slider-right-md-noct-hover.svg');
+                }
+            }
+        }
+    }
+}
+
+footer {
+    &.light-mode {
         border-bottom: 5px solid $purple;
     }
-    &.dark-mode{
+
+    &.dark-mode {
         border-bottom: 5px solid black;
+    }
+
+    h5 {
+        &.dark-mode {
+            color: $white;
+        }
+    }
+
+    .social-icon {
+        &.dark-mode {
+            &:hover {
+                color: $white;
+            }
+        }
     }
 }

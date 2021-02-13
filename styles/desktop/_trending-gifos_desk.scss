@@ -15,24 +15,9 @@
         justify-content: center;
         align-items: center;
 
-        button{
+        .arrow{
             width: 40px;
             height: 40px;
-        }
-
-        .arrow-left{
-            background-image: url('../assets/button-slider-left.svg');
-
-            &:hover{
-                background-image: url('../assets/button-slider-left-hover.svg');
-            }
-        }
-
-        .arrow-right{
-            background-image: url('../assets/Button-Slider-right.svg');
-            &:hover{
-                background-image: url('../assets/Button-Slider-right-hover.svg');
-            }
         }
 
         #trending-gifs-slider {
@@ -54,6 +39,5 @@
                 }
             }
         }
-
     }
 }

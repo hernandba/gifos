@@ -10,20 +10,19 @@
     <link rel="stylesheet" type="text/css" href="../styles/main.css">
 </head>
 
-<body>
-    <nav id="nav-bar">
-        <a href="./index.html" class="btn-logo">
-            <img src="../assets/logo-desktop.svg" alt="Logo GIFOS" class="logo desktop">
-            <img src="../assets/logo-mobile.svg" alt="Logo GIFOS" class="logo mobile">
-        </a>
-        <button class="btn-ham"><img src="../assets/burger.svg" alt="Boton Hamburguesa"></button>
+<body class="light-mode">
+    <nav id="nav-bar" class="light-mode">
+        <a href="./index.html" class="btn-logo desktop light-mode"></a>
+        <a href="./index.html" class="btn-logo mobile light-mode"></a>
+        <button class="btn-ham light-mode"></button>
+        <button class="btn-ham-close hide light-mode"></button>
 
-        <div id="nav-menu" class="nav-menu-hide">
-            <a class="main-txt-font link" href="#">Modo Nocturno</a>
-            <a class="main-txt-font link" href="./favs.html">Favoritos</a>
-            <a class="main-txt-font link" href="./misGifos.html">Mis GIFOS</a>
+        <div id="nav-menu" class="nav-menu-hide light-mode">
+            <a id="dark-mode-btn" class="main-txt-font link light-mode" href="#">Modo Nocturno</a>
+            <a class="main-txt-font link light-mode" href="./favs.html">Favoritos</a>
+            <a class="main-txt-font link light-mode" href="./misGifos.html">Mis GIFOS</a>
             <a href="./crearGifos.html">
-                <div class="btn-crear"></div>
+                <div class="btn-crear light-mode"></div>
             </a>
         </div>
     </nav>
@@ -31,18 +30,18 @@
     <section id="gifos-create">
 
         <div id="record-general">
-            <img id="camera-img" src="../assets/camara.svg" alt="Imagen Camara">
+            <div id="camera-img" class="light-mode"></div>
             <div id="record-main">
-                <div id="record-frame">
+                <div id="record-frame" class="light-mode">
                     <div id="inside-corners">
                         <div id="record-init" class="">
                             <h2 class="main-title-font lit-txt-color">Aquí podrás crear tus propios <span>Gifos</span></h2>
-                            <p class="second-txt-font">¡Crea tu GIFO en sólo 3 pasos</p>
-                            <p class="second-txt-font">(sólo necesitas una cámara para grabar un video)</p>
+                            <p class="second-txt-font light-mode">¡Crea tu GIFO en sólo 3 pasos</p>
+                            <p class="second-txt-font light-mode">(sólo necesitas una cámara para grabar un video)</p>
                         </div>
                         <div id="record-permit" class="hide">
                             <h2 class="main-title-font lit-txt-color">¿Nos das acceso a tu cámara?</h2>
-                            <p class="second-txt-font">El acceso a tu cámara será válido sólo por el tiempo en el que estés creando el GIFO.</p>
+                            <p class="second-txt-font light-mode">El acceso a tu cámara será válido sólo por el tiempo en el que estés creando el GIFO.</p>
                         </div>
                         <video src="" class="hide"></video>
                         <div id="raw-gif" class="hide">
@@ -73,39 +72,40 @@
                 </div>
                 <div id="record-status-bar">
                     <div id="record-steps">
-                        <div class="second-txt-font step" id="step1">1</div>
-                        <div class="second-txt-font step" id="step2">2</div>
-                        <div class="second-txt-font step" id="step3">3</div>
+                        <div class="second-txt-font step light-mode" id="step1">1</div>
+                        <div class="second-txt-font step light-mode" id="step2">2</div>
+                        <div class="second-txt-font step light-mode" id="step3">3</div>
                     </div>
                     <div id="record-log">
-                        <span id="record-time" class="main-txt-font log hide"></span>
-                        <a id="record-repeat" class="main-txt-font link log hide" href="#">repetir captura</a>
+                        <span id="record-time" class="main-txt-font light-mode log hide"></span>
+                        <a id="record-repeat" class="main-txt-font link light-mode log hide" href="#">repetir captura</a>
                     </div>
                 </div>
             </div>
-            <img id="movie-img" src="../assets/pelicula.svg" alt="Imagen Pelicula">
+            <div id="movie-img" class="light-mode"></div>
         </div>
-        <span id="line-separator"></span>
-        <button id="start-btn" class="more-btn main-title-font lit-txt-color">Comenzar</button>
-        <button id="record-btn" class="more-btn main-title-font lit-txt-color hide">Grabar</button>
-        <button id="stop-btn" class="more-btn main-title-font lit-txt-color hide">Finalizar</button>
-        <button id="upload-btn" class="more-btn main-title-font lit-txt-color hide">Subir Gifo</button>
+        <span id="line-separator" class="light-mode"></span>
+        <button id="start-btn" class="more-btn light-mode main-title-font lit-txt-color">Comenzar</button>
+        <button id="record-btn" class="more-btn light-mode main-title-font lit-txt-color hide">Grabar</button>
+        <button id="stop-btn" class="more-btn light-mode main-title-font lit-txt-color hide">Finalizar</button>
+        <button id="upload-btn" class="more-btn light-mode main-title-font lit-txt-color hide">Subir Gifo</button>
 
     </section>
 
-    <footer>
+    <footer class="light-mode">
         <div id="social-share">
-            <h5 class="second-txt-font">Compartir en: </h5>
+            <h5 class="second-txt-font light-mode">Compartir en: </h5>
             <div id="social-icons">
-                <a href="https://www.facebook.com/"><i class="social-icon fab fa-facebook fa-lg"></i></a>
-                <a href="https://twitter.com/?lang=es"><i class="social-icon fab fa-twitter fa-lg"></i></a>
-                <a href="https://www.instagram.com/"><i class="social-icon fab fa-instagram fa-lg"></i></a>
+                <a href="https://www.facebook.com/"><i class="social-icon fab fa-facebook fa-lg light-mode"></i></a>
+                <a href="https://twitter.com/?lang=es"><i class="social-icon fab fa-twitter fa-lg light-mode"></i></a>
+                <a href="https://www.instagram.com/"><i class="social-icon fab fa-instagram fa-lg light-mode"></i></a>
             </div>
         </div>
-        <h5 class="second-txt-font">&copy; GIFOS 2021 All Rights Reserved.</h5>
+        <h5 class="second-txt-font light-mode">&copy; GIFOS 2021 All Rights Reserved.</h5>
     </footer>
 
     <script type="text/javascript" src="../scripts/menu_mob.js"></script>
+    <script type="text/javascript" src="../scripts/darkMode.js"></script>
     <script type="text/javascript" src="../scripts/infoAPI.js"></script>
     <script type="text/javascript" src="../scripts/myGifs_init.js"></script>
     <script type="text/javascript" src="../scripts/gif_create.js"></script>

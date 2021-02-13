@@ -11,22 +11,11 @@
         justify-content: center;
 
         #camera-img {
-            align-self: center;
-            width: 100%;
-            max-width: 123px;
-            min-width: 90px;
-            height: auto;
-            margin-left: 80px;
-
+            display: none;
         }
 
         #movie-img {
-            align-self: flex-end;
-            width: 100%;
-            max-width: 142px;
-            min-width: 100px;
-            height: auto;
-            margin-right: 80px;
+            display: none;
         }
 
         #record-main {
@@ -37,7 +26,14 @@
 
             #record-frame {
                 padding: 20px;
-                border: 1px solid $purple;
+
+                &.light-mode {
+                    border: 1px solid $purple;
+                }
+
+                &.dark-mode {
+                    border: 1px solid $white;
+                }
 
                 #inside-corners {
                     border: 1px solid $acqua;
@@ -69,11 +65,10 @@
                     video {
                         width: 480px;
                         height: 320px;
-                        border: 1px dashed hotpink;
                     }
 
                     #raw-gif {
-                        width: 420px;
+                        width: 480px;
                         height: 320px;
                         background-position: center;
                         background-repeat: no-repeat;
@@ -87,8 +82,8 @@
                             display: grid;
                             grid-template-columns: 1fr 2fr 1fr;
                             grid-template-rows: 1fr;
-                            
-                            .raw-overlay-info{
+
+                            .raw-overlay-info {
                                 grid-column: 2 / 3;
                                 grid-row: 1 / 2;
 
@@ -97,25 +92,25 @@
                                 justify-content: center;
                                 align-items: center;
 
-                                img{
+                                img {
                                     width: 24px;
                                     height: 24px;
                                 }
 
-                                p{
+                                p {
                                     color: $white;
                                     margin-top: 10px;
                                 }
-                                
+
                             }
-                            
+
                             .raw-overlay-btns {
                                 grid-column: 3 / 4;
                                 display: flex;
                                 justify-content: flex-end;
                                 gap: 11px;
-                                
-                                a{
+
+                                a {
                                     width: 32px;
                                     height: 32px;
                                 }
@@ -143,7 +138,7 @@
                     grid-column: 2 / 3;
                     justify-self: center;
                     display: flex;
-                    gap: 26px;
+                    gap: 15px;
 
                     .step {
                         width: 32px;
@@ -153,14 +148,26 @@
                         justify-content: center;
                         align-items: center;
 
-                        border: 1px solid $purple;
                         border-radius: 50%;
-                        color: $purple;
-                    }
 
-                    .step-active {
-                        color: $white;
-                        background-color: $purple;
+                        &.light-mode {
+                            border: 1px solid $purple;
+                            color: $purple;
+
+                            &.step-active {
+                                color: $white;
+                                background-color: $purple;
+                            }
+                        }
+
+                        &.dark-mode {
+                            border: 1px solid $white;
+                            color: $white;
+                            &.step-active {
+                                color: $medium-grey;
+                                background-color: $white;
+                            }
+                        }
                     }
                 }
 
@@ -170,7 +177,13 @@
                     align-self: center;
 
                     #record-time {
-                        color: $purple;
+                        &.light-mode {
+                            color: $purple;
+                        }
+                        
+                        &.dark-mode {
+                            color: $white;
+                        }
                     }
 
                     #record-repeat {
@@ -184,8 +197,15 @@
     #line-separator {
         height: 7px;
         width: 50%;
-        background-color: $purple;
         border-radius: 10px;
+        
+        &.light-mode {
+            background-color: $purple;
+        }
+        
+        &.dark-mode {
+            background-color: $white;
+        }
     }
 
     .more-btn {
