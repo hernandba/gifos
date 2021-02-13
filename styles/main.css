@@ -1255,8 +1255,6 @@ footer .social-icon.dark-mode:hover {
   }
   #gifos-create #record-general #record-main {
     width: 100%;
-    max-width: 688px;
-    min-width: 600px;
     margin: 0 5%;
   }
   #gifos-create #record-general #record-main #record-frame {
@@ -1271,7 +1269,7 @@ footer .social-icon.dark-mode:hover {
   #gifos-create #record-general #record-main #record-frame #inside-corners {
     border: 1px solid #5ED7C6;
     padding: 17px 0;
-    height: 350px;
+    height: 236px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1286,25 +1284,19 @@ footer .social-icon.dark-mode:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  #gifos-create #record-general #record-main #record-frame #inside-corners #record-init {
-    width: 480px;
-    line-height: 30px;
+  #gifos-create #record-general #record-main #record-frame #inside-corners #record-init, #gifos-create #record-general #record-main #record-frame #inside-corners #record-permit {
+    width: 60%;
+    min-width: 200px;
   }
   #gifos-create #record-general #record-main #record-frame #inside-corners #record-init h2 span {
     text-transform: uppercase;
     color: #5ED7C6;
   }
-  #gifos-create #record-general #record-main #record-frame #inside-corners #record-permit {
-    width: 480px;
-    line-height: 30px;
-  }
-  #gifos-create #record-general #record-main #record-frame #inside-corners video {
-    width: 480px;
-    height: 320px;
+  #gifos-create #record-general #record-main #record-frame #inside-corners video, #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif {
+    width: 300px;
+    height: 200px;
   }
   #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif {
-    width: 480px;
-    height: 320px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1373,17 +1365,19 @@ footer .social-icon.dark-mode:hover {
     opacity: 1;
   }
   #gifos-create #record-general #record-main #record-status-bar {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 24px 0 19px 0;
   }
   #gifos-create #record-general #record-main #record-status-bar #record-steps {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / 3;
-    justify-self: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1420,14 +1414,7 @@ footer .social-icon.dark-mode:hover {
     background-color: #FFFFFF;
   }
   #gifos-create #record-general #record-main #record-status-bar #record-log {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3 / 4;
-    -ms-grid-column-align: end;
-        justify-self: end;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    padding-top: 19px;
   }
   #gifos-create #record-general #record-main #record-status-bar #record-log #record-time.light-mode {
     color: #572EE5;

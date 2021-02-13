@@ -20,8 +20,6 @@
 
         #record-main {
             width: 100%;
-            max-width: 688px;
-            min-width: 600px;
             margin: 0 5%;
 
             #record-frame {
@@ -38,17 +36,20 @@
                 #inside-corners {
                     border: 1px solid $acqua;
                     padding: 17px 0;
-                    height: 350px;
+                    height: 236px;
 
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
 
-                    #record-init {
-                        width: 480px;
-                        line-height: 30px;
+                    #record-init, #record-permit{
+                        width: 60%;
+                        min-width: 200px;
+                        // line-height: 20px;                        
+                    }
 
+                    #record-init {
                         h2 {
                             span {
                                 text-transform: uppercase;
@@ -57,19 +58,12 @@
                         }
                     }
 
-                    #record-permit {
-                        width: 480px;
-                        line-height: 30px;
-                    }
-
-                    video {
-                        width: 480px;
-                        height: 320px;
+                    video, #raw-gif{
+                        width: 300px;
+                        height: 200px;
                     }
 
                     #raw-gif {
-                        width: 480px;
-                        height: 320px;
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
@@ -124,19 +118,17 @@
                                 }
                             }
                         }
-
                     }
                 }
             }
 
             #record-status-bar {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 padding: 24px 0 19px 0;
 
                 #record-steps {
-                    grid-column: 2 / 3;
-                    justify-self: center;
                     display: flex;
                     gap: 15px;
 
@@ -172,9 +164,7 @@
                 }
 
                 #record-log {
-                    grid-column: 3 / 4;
-                    justify-self: end;
-                    align-self: center;
+                    padding-top: 19px;
 
                     #record-time {
                         &.light-mode {
