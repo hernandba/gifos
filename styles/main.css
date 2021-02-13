@@ -224,18 +224,28 @@ button:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.92);
   z-index: 2;
 }
 
 .gifcard .gifcard-max-container .gifcard-max .btn-close {
-  margin: 0 5px 73px 0;
+  margin: 0 5px 50px 0;
   padding: 5px;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
+.gifcard .gifcard-max-container .gifcard-max .gifcard-max-gifimg {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
 .gifcard .gifcard-max-container .gifcard-max .gifcard-max-bar {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1178,6 +1188,7 @@ footer .social-icon.dark-mode:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-bottom: 79px;
   }
   .gifs-section .gifs-section-title {
     text-align: center;

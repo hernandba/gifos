@@ -48,6 +48,13 @@ function createSearchSuggestions() {
                     let newSrchSuggest = document.createElement('div');
                     newSrchSuggest.classList.add('srch-suggest');
                     newSrchSuggest.innerHTML = srchSuggest.innerHTML;
+
+                    if (sessionStorage.getItem('darkModeStorage') != null) {
+                        if (JSON.parse(sessionStorage.getItem('darkModeStorage'))) {
+                            newSrchSuggest.querySelector('#srch-icon').classList.add('dark-mode');
+                        }
+                    }
+
                     newSrchSuggest.querySelector('#srch-suggest-txt').innerText = element.name;
                     srchSuggestList.appendChild(newSrchSuggest);
                 });
