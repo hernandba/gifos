@@ -102,6 +102,10 @@ button:hover {
           transform: scale(1.2);
 }
 
+button:active {
+  outline: none;
+}
+
 #srch-field button {
   width: 20px;
   height: 20px;
