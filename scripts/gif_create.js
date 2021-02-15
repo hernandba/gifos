@@ -31,6 +31,7 @@ function getStreamAndRecord() {
     navigator.mediaDevices.getUserMedia({
         audio: false,
         video: {
+            facingMode: "user",
             height: {
                 max: 480
             }
