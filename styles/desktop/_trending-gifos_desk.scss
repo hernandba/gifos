@@ -23,7 +23,7 @@
         #trending-gifs-slider {
             width: 80%;
             margin: 0 22px;
-            overflow: scroll;
+            overflow: auto;
 
             scroll-behavior: smooth;
             display: flex;

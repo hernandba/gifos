@@ -165,8 +165,10 @@ button:active {
   font-family: "Montserrat", sans-serif;
 }
 
-.gifcard:hover .gifcard-overlay {
-  opacity: 1;
+@media (min-width: 901px) {
+  .gifcard:hover .gifcard-overlay {
+    opacity: 1;
+  }
 }
 
 .gifcard .gifcard-overlay {
@@ -247,6 +249,7 @@ button:active {
   width: 100%;
   max-width: 600px;
   height: auto;
+  max-height: 385px;
 }
 
 .gifcard .gifcard-max-container .gifcard-max .gifcard-max-bar {
@@ -254,9 +257,9 @@ button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding-top: 14px;
 }
 
@@ -665,7 +668,7 @@ footer .social-icon.dark-mode:hover {
   #trending-gifs #slider-container #trending-gifs-slider {
     width: 80%;
     margin: 0 22px;
-    overflow: scroll;
+    overflow: auto;
     scroll-behavior: smooth;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1223,7 +1226,7 @@ footer .social-icon.dark-mode:hover {
   }
   #trending-gifs #slider-container #trending-gifs-slider {
     width: 100%;
-    overflow: scroll;
+    overflow: auto;
     scroll-behavior: auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1309,8 +1312,8 @@ footer .social-icon.dark-mode:hover {
     color: #5ED7C6;
   }
   #gifos-create #record-general #record-main #record-frame #inside-corners video, #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif {
-    width: 300px;
-    height: 200px;
+    width: 250px;
+    height: 167px;
   }
   #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif {
     background-position: center;

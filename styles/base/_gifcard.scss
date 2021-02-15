@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    button{
+    button {
         width: 32px;
         height: 32px;
         border-radius: 20%;
@@ -23,8 +23,10 @@
         }
     }
 
-    &:hover .gifcard-overlay {
-        opacity: 1;
+    @media (min-width: 901px) {
+        &:hover .gifcard-overlay {
+            opacity: 1;
+        }
     }
 
     .gifcard-overlay {
@@ -44,16 +46,17 @@
             align-self: flex-end;
             display: flex;
             gap: 11px;
-            
+
             button {
                 opacity: 0.4;
-                &:hover{
+
+                &:hover {
                     opacity: 1;
                 }
             }
         }
 
-        .gifcard-info{
+        .gifcard-info {
             color: white;
         }
     }
@@ -67,7 +70,7 @@
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;  
+            bottom: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -81,17 +84,18 @@
                 align-self: flex-end;
             }
 
-            .gifcard-max-gifimg{
+            .gifcard-max-gifimg {
                 width: 100%;
                 max-width: 600px;
-                // min-width: 250px;    
                 height: auto;
+                max-height: 385px;
+                // min-width: 250px;    
             }
 
             .gifcard-max-bar {
                 width: 100%;
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 padding-top: 14px;
 
                 .gifcard-max-bar-btns {
