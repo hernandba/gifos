@@ -46,7 +46,8 @@ function getStreamAndRecord() {
 
         video.classList.remove('hide');
         video.srcObject = stream;
-        video.play()
+
+        video.play().then(playing => console.log(playing)).catch(console.error);
 
         recorder = RecordRTC(stream, {
             type: 'gif',
@@ -59,7 +60,7 @@ function getStreamAndRecord() {
             //     console.log('recording started')
             // }
         });
-    });
+    }).catch(console.error);
 }
 
 /* ------------------------------ RECORD BUTTON ----------------------------- */
@@ -114,7 +115,7 @@ stopBtn.addEventListener('click', event => {
         blob = recorder.getBlob();
         rawGif.setAttribute('style', `background-image: url(${URL.createObjectURL(blob)})`);
 
-        video.pause();
+        // video.pause();
         video.classList.add('hide');
         rawGif.classList.remove('hide');
 
