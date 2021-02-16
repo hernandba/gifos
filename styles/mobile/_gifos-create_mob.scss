@@ -102,9 +102,10 @@
                                 grid-column: 3 / 4;
                                 display: flex;
                                 justify-content: flex-end;
-                                gap: 11px;
+                                // gap: 11px;
 
                                 a {
+                                    margin-left: 11px;
                                     width: 32px;
                                     height: 32px;
                                 }
@@ -130,7 +131,11 @@
 
                 #record-steps {
                     display: flex;
-                    gap: 15px;
+                    // gap: 15px;
+
+                    & > * + * {
+                        margin-left: 15px;
+                    }
 
                     .step {
                         width: 32px;

@@ -14,6 +14,7 @@ body {
     }
 
     .btn-logo {
+        background-repeat: no-repeat;
         &.desktop {
             &.light-mode {
                 background-image: url('../assets/logo-desktop.svg');

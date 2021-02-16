@@ -1,12 +1,14 @@
 .gifcards-container {
+    margin-top: -29px;
     width: 81%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     column-gap: 29px;
-    row-gap: 29px;
+    // row-gap: 29px;
 
     .gifcard {
+        margin-top: 29px;
         width: 260px;
         height: 200px;
     }

@@ -197,10 +197,10 @@ button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 11px;
 }
 
 .gifcard .gifcard-overlay .gifcard-overlay-bar-btns button {
+  margin-left: 11px;
   opacity: 0.4;
 }
 
@@ -270,7 +270,10 @@ button:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+}
+
+.gifcard .gifcard-max-container .gifcard-max .gifcard-max-bar .gifcard-max-bar-btns > * {
+  margin-left: 20px;
 }
 
 .social-icon {
@@ -291,6 +294,10 @@ body.dark-mode {
 
 #nav-bar.dark-mode {
   border-top: 5px solid black;
+}
+
+#nav-bar .btn-logo {
+  background-repeat: no-repeat;
 }
 
 #nav-bar .btn-logo.desktop.light-mode {
@@ -483,7 +490,9 @@ footer .social-icon.dark-mode:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 42px;
+  }
+  #nav-bar #nav-menu a {
+    margin-left: 42px;
   }
   header {
     display: -webkit-box;
@@ -594,6 +603,7 @@ footer .social-icon.dark-mode:hover {
     text-align: center;
   }
   .gifcards-container {
+    margin-top: -29px;
     width: 81%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -607,9 +617,9 @@ footer .social-icon.dark-mode:hover {
             justify-content: space-evenly;
     -webkit-column-gap: 29px;
             column-gap: 29px;
-    row-gap: 29px;
   }
   .gifcards-container .gifcard {
+    margin-top: 29px;
     width: 260px;
     height: 200px;
   }
@@ -678,7 +688,9 @@ footer .social-icon.dark-mode:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 29px;
+  }
+  #trending-gifs #slider-container #trending-gifs-slider #trending-gifs-container > * + * {
+    margin-left: 29px;
   }
   #trending-gifs #slider-container #trending-gifs-slider #trending-gifs-container .gifcard {
     width: 357px;
@@ -847,9 +859,9 @@ footer .social-icon.dark-mode:hover {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    gap: 11px;
   }
   #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay .raw-overlay-btns a {
+    margin-left: 11px;
     width: 32px;
     height: 32px;
   }
@@ -874,7 +886,9 @@ footer .social-icon.dark-mode:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 26px;
+  }
+  #gifos-create #record-general #record-main #record-status-bar #record-steps > * + * {
+    margin-left: 26px;
   }
   #gifos-create #record-general #record-main #record-status-bar #record-steps .step {
     width: 32px;
@@ -955,6 +969,9 @@ footer .social-icon.dark-mode:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   footer #social-share h5 {
     margin-right: 17px;
@@ -963,7 +980,9 @@ footer .social-icon.dark-mode:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 20px;
+  }
+  footer #social-share #social-icons > * + * {
+    margin-left: 20px;
   }
 }
 
@@ -1076,6 +1095,7 @@ footer .social-icon.dark-mode:hover {
     max-width: 400px;
   }
   .gifcards-container {
+    margin-top: -21px;
     width: 89%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1089,9 +1109,9 @@ footer .social-icon.dark-mode:hover {
             justify-content: space-evenly;
     -webkit-column-gap: 21px;
             column-gap: 21px;
-    row-gap: 21px;
   }
   .gifcards-container .gifcard {
+    margin-top: 21px;
     width: 156px;
     height: 120px;
   }
@@ -1236,8 +1256,10 @@ footer .social-icon.dark-mode:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 22px;
     padding: 0 22px;
+  }
+  #trending-gifs #slider-container #trending-gifs-slider #trending-gifs-container > * + * {
+    margin-left: 22px;
   }
   #trending-gifs #slider-container #trending-gifs-slider #trending-gifs-container .gifcard {
     width: 243px;
@@ -1371,9 +1393,9 @@ footer .social-icon.dark-mode:hover {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    gap: 11px;
   }
   #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay .raw-overlay-btns a {
+    margin-left: 11px;
     width: 32px;
     height: 32px;
   }
@@ -1400,7 +1422,9 @@ footer .social-icon.dark-mode:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 15px;
+  }
+  #gifos-create #record-general #record-main #record-status-bar #record-steps > * + * {
+    margin-left: 15px;
   }
   #gifos-create #record-general #record-main #record-status-bar #record-steps .step {
     width: 32px;
@@ -1480,8 +1504,10 @@ footer .social-icon.dark-mode:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 19px;
     margin-bottom: 47px;
+  }
+  footer #social-share #social-icons > * + * {
+    margin-left: 19px;
   }
 }
 /*# sourceMappingURL=main.css.map */

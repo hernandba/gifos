@@ -30,8 +30,12 @@
 
             #trending-gifs-container {
                 display: flex;
-                gap: 29px;
+                // gap: 29px;
                 // padding: 0 94px;
+
+                & > * + * {
+                    margin-left: 29px;
+                }
 
                 .gifcard {
                     width: 357px;

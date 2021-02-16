@@ -138,9 +138,10 @@
                                 grid-column: 3 / 4;
                                 display: flex;
                                 justify-content: flex-end;
-                                gap: 11px;
+                                // gap: 11px;
 
                                 a {
+                                    margin-left: 11px;
                                     width: 32px;
                                     height: 32px;
                                 }
@@ -168,7 +169,11 @@
                     grid-column: 2 / 3;
                     justify-self: center;
                     display: flex;
-                    gap: 26px;
+                    // gap: 26px;
+
+                    & > * + *{
+                        margin-left: 26px;
+                    }
 
                     .step {
                         width: 32px;

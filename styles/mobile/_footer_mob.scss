@@ -12,9 +12,13 @@ footer {
 
         #social-icons {
             display: flex;
-            gap: 19px;
-
+            // gap: 19px;
             margin-bottom: 47px;
+            
+            //All children minus first one
+            & > * + *{
+                margin-left: 19px;
+            }
         }
     }
 }
