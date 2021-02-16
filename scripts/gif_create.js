@@ -31,10 +31,9 @@ function getStreamAndRecord() {
     navigator.mediaDevices.getUserMedia({
         audio: false,
         video: {
-            facingMode: "user",
-            height: {
-                max: 480
-            }
+            width: 480,
+            height: 320,
+            facingMode: 'user'
         }
     }).then(stream => {
         recordPermit.classList.add('hide');
@@ -52,12 +51,13 @@ function getStreamAndRecord() {
         recorder = RecordRTC(stream, {
             type: 'gif',
             frameRate: 1,
-            quality: 1,
-            width: 360,
-            hidden: 240,
-            onGifRecordingStarted: () => {
-                console.log('recording started')
-            }
+            quality: 0.5,
+            width: 480,
+            height: 320
+            // hidden: 240,
+            // onGifRecordingStarted: () => {
+            //     console.log('recording started')
+            // }
         });
     });
 }
@@ -112,8 +112,9 @@ stopBtn.addEventListener('click', event => {
 
     recorder.stopRecording(() => {
         blob = recorder.getBlob();
-
         rawGif.setAttribute('style', `background-image: url(${URL.createObjectURL(blob)})`);
+
+        video.pause();
         video.classList.add('hide');
         rawGif.classList.remove('hide');
 
@@ -133,6 +134,7 @@ recordRepeat.addEventListener('click', event => {
     //Hide pre-rawGif
     rawGif.classList.add('hide');
     //Show video
+    video.play()
     video.classList.remove('hide');
     //Reset and show timer
     seconds = '00', minutes = '00', hours = '00';
@@ -204,7 +206,7 @@ function subirAGiphy() {
                     tag.href = imageUrl;
                     tag.download = fileName;
                     document.body.appendChild(tag);
-                    tag.addEventListener('click', event => event.stopPropagation());//Added by me
+                    tag.addEventListener('click', event => event.stopPropagation()); //Added by me
                     tag.click();
                     document.body.removeChild(tag);
                 }

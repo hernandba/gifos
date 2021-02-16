@@ -68,7 +68,7 @@
                 #inside-corners {
                     border: 1px solid $acqua;
                     padding: 17px 0;
-                    height: 350px;
+                    height: 360px;
 
                     display: flex;
                     flex-direction: column;
@@ -102,7 +102,7 @@
                         height: 320px;
                         background-position: center;
                         background-repeat: no-repeat;
-                        background-size: cover;
+                        background-size: auto;
 
                         .raw-overlay {
                             width: 100%;

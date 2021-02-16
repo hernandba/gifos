@@ -770,7 +770,7 @@ footer .social-icon.dark-mode:hover {
   #gifos-create #record-general #record-main #record-frame #inside-corners {
     border: 1px solid #5ED7C6;
     padding: 17px 0;
-    height: 350px;
+    height: 360px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -806,7 +806,7 @@ footer .social-icon.dark-mode:hover {
     height: 320px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
   }
   #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay {
     width: 100%;
@@ -1310,7 +1310,7 @@ footer .social-icon.dark-mode:hover {
   #gifos-create #record-general #record-main #record-frame #inside-corners {
     border: 1px solid #5ED7C6;
     padding: 17px 0;
-    height: 236px;
+    height: 350px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1334,8 +1334,10 @@ footer .social-icon.dark-mode:hover {
     color: #5ED7C6;
   }
   #gifos-create #record-general #record-main #record-frame #inside-corners video, #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif {
-    width: 250px;
-    height: 167px;
+    width: 80%;
+    max-width: 306px;
+    height: auto;
+    min-height: 230px;
   }
   #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif {
     background-position: center;

@@ -36,7 +36,7 @@
                 #inside-corners {
                     border: 1px solid $acqua;
                     padding: 17px 0;
-                    height: 236px;
+                    height: 350px;
 
                     display: flex;
                     flex-direction: column;
@@ -59,8 +59,10 @@
                     }
 
                     video, #raw-gif{
-                        width: 250px;
-                        height: 167px;
+                        width: 80%;
+                        max-width: 306px;
+                        height: auto;
+                        min-height: 230px;
                     }
 
                     #raw-gif {
