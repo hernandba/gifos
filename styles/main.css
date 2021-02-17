@@ -199,13 +199,23 @@ button:active {
   display: flex;
 }
 
-.gifcard .gifcard-overlay .gifcard-overlay-bar-btns button {
+.gifcard .gifcard-overlay .gifcard-overlay-bar-btns button, .gifcard .gifcard-overlay .gifcard-overlay-bar-btns a {
   margin-left: 11px;
   opacity: 0.4;
 }
 
-.gifcard .gifcard-overlay .gifcard-overlay-bar-btns button:hover {
+.gifcard .gifcard-overlay .gifcard-overlay-bar-btns button:hover, .gifcard .gifcard-overlay .gifcard-overlay-bar-btns a:hover {
   opacity: 1;
+}
+
+.gifcard .gifcard-overlay .gifcard-overlay-bar-btns a {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.gifcard .gifcard-overlay .gifcard-overlay-bar-btns a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .gifcard .gifcard-overlay .gifcard-info {
@@ -274,6 +284,16 @@ button:active {
 
 .gifcard .gifcard-max-container .gifcard-max .gifcard-max-bar .gifcard-max-bar-btns > * {
   margin-left: 20px;
+}
+
+.gifcard .gifcard-max-container .gifcard-max .gifcard-max-bar .gifcard-max-bar-btns a {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.gifcard .gifcard-max-container .gifcard-max .gifcard-max-bar .gifcard-max-bar-btns a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .social-icon {
@@ -864,11 +884,13 @@ footer .social-icon.dark-mode:hover {
     margin-left: 11px;
     width: 32px;
     height: 32px;
-  }
-  #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay .raw-overlay-btns button {
     opacity: 0.4;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
   }
-  #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay .raw-overlay-btns button:hover {
+  #gifos-create #record-general #record-main #record-frame #inside-corners #raw-gif .raw-overlay .raw-overlay-btns a:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
     opacity: 1;
   }
   #gifos-create #record-general #record-main #record-status-bar {

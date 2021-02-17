@@ -131,7 +131,6 @@
                                     color: $white;
                                     margin-top: 10px;
                                 }
-
                             }
 
                             .raw-overlay-btns {
@@ -144,18 +143,17 @@
                                     margin-left: 11px;
                                     width: 32px;
                                     height: 32px;
-                                }
 
-                                button {
                                     opacity: 0.4;
+                                    transition: all 0.2s;
 
                                     &:hover {
+                                        transform: scale(1.2);
                                         opacity: 1;
                                     }
                                 }
                             }
                         }
-
                     }
                 }
             }
@@ -171,7 +169,7 @@
                     display: flex;
                     // gap: 26px;
 
-                    & > * + *{
+                    &>*+* {
                         margin-left: 26px;
                     }
 
@@ -198,6 +196,7 @@
                         &.dark-mode {
                             border: 1px solid $white;
                             color: $white;
+
                             &.step-active {
                                 color: $medium-grey;
                                 background-color: $white;
@@ -215,7 +214,7 @@
                         &.light-mode {
                             color: $purple;
                         }
-                        
+
                         &.dark-mode {
                             color: $white;
                         }
@@ -233,11 +232,11 @@
         height: 7px;
         width: 50%;
         border-radius: 10px;
-        
+
         &.light-mode {
             background-color: $purple;
         }
-        
+
         &.dark-mode {
             background-color: $white;
         }

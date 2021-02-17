@@ -32,7 +32,7 @@
         <img src="assets/ilustra_header.svg" alt="Ilustración de Bienvenida">
     </header>
 
-    <section id="srch">
+    <div id="srch">
         <div id="srch-bar" class="light-mode">
             <div id="srch-field">
                 <input id="srch-input" class="light-mode" type="text" placeholder="Busca GIFOS y más..."
@@ -70,7 +70,7 @@
                     más</button>
             </div>
         </div>
-    </section>
+    </div>
 
     <section id="trending-gifs" class="light-mode">
         <h2 class="main-title-font lit-txt-color">Trending GIFOS</h2>
@@ -80,17 +80,18 @@
             <button class="arrow arrow-left light-mode"></button>
             <div id="trending-gifs-slider">
                 <div id="trending-gifs-container">
+
                     <div class="gifcard hide">
                         <span id="gifId" class="hide"></span>
                         <div class="gifcard-overlay">
                             <div class="gifcard-overlay-bar-btns">
                                 <button class="btn-fav fav-inactive"></button>
-                                <a class="gifcard-down-link" href="#" data-href="" download="">
-                                    <button class="btn-down"><img src="assets/icon-download-hover.svg"
-                                            alt="Boton Descargar Gif"></button>
+                                <a class="btn-down gifcard-down-link" href="#" data-href="" download="">
+                                    <img src="assets/icon-download-hover.svg" alt="Boton Descargar Gif">
                                 </a>
-                                <button class="btn-max"><img src="assets/icon-max-hover.svg"
-                                        alt="Boton Maximizar Gif"></button>
+                                <button class="btn-max">
+                                    <img src="assets/icon-max-hover.svg" alt="Boton Maximizar Gif">
+                                </button>
                             </div>
                             <article class="gifcard-info">
                                 <h4 class="gifcard-info-user"></h4>
@@ -100,7 +101,7 @@
                         <div class="gifcard-max-container hide">
                             <div class="gifcard-max">
                                 <button class="btn-close"><img src="assets/close.svg" alt="Boton Cerrar"></button>
-                                <img class="gifcard-max-gifimg" src="" alt="Imagen Gif">
+                                <img class="gifcard-max-gifimg" src="#" alt="Imagen Gif">
                                 <div class="gifcard-max-bar">
                                     <article class="gifcard-info">
                                         <h4 class="gifcard-info-user"></h4>
@@ -108,9 +109,8 @@
                                     </article>
                                     <div class="gifcard-max-bar-btns">
                                         <button class="btn-fav fav-inactive"></button>
-                                        <a class="gifcard-down-link" href="#" data-href="" download="">
-                                            <button class="btn-down"><img src="assets/icon-download-hover.svg"
-                                                    alt="Boton Descargar Gif"></button>
+                                        <a class="btn-down gifcard-down-link" href="#" data-href="" download="">
+                                            <img src="assets/icon-download-hover.svg" alt="Boton Descargar Gif">
                                         </a>
                                     </div>
                                 </div>
@@ -135,15 +135,15 @@
         <h5 class="second-txt-font light-mode">&copy; GIFOS 2021 All Rights Reserved.</h5>
     </footer>
 
-    <script type="text/javascript" src="scripts/menu_mob.js"></script>
-    <script type="text/javascript" src="scripts/infoAPI.js"></script>
-    <script type="text/javascript" src="scripts/myGifs_init.js"></script>
-    <script type="text/javascript" src="scripts/favs_init.js"></script>
-    <script type="text/javascript" src="scripts/trendingTerms.js"></script>
-    <script type="text/javascript" src="scripts/gifcard.js"></script>
-    <script type="text/javascript" src="scripts/trendingGifs.js"></script>
-    <script type="text/javascript" src="scripts/searchGifs.js"></script>
-    <script type="text/javascript" src="scripts/darkMode.js"></script>
+    <script src="scripts/menu_mob.js"></script>
+    <script src="scripts/infoAPI.js"></script>
+    <script src="scripts/myGifs_init.js"></script>
+    <script src="scripts/favs_init.js"></script>
+    <script src="scripts/trendingTerms.js"></script>
+    <script src="scripts/gifcard.js"></script>
+    <script src="scripts/trendingGifs.js"></script>
+    <script src="scripts/searchGifs.js"></script>
+    <script src="scripts/darkMode.js"></script>
 </body>
 
 </html>
