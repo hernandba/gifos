@@ -47,7 +47,7 @@ function getStreamAndRecord() {
         video.classList.remove('hide');
         video.srcObject = stream;
 
-        video.play().then(playing => console.log(playing)).catch(console.error);
+        
 
         recorder = RecordRTC(stream, {
             type: 'gif',
@@ -69,6 +69,7 @@ let timeInterval, seconds = '00',
     hours = '00';
 
 recordBtn.addEventListener('click', event => {
+    // video.play().then(playing => console.log(playing)).catch(console.error);
     recordBtn.classList.add('hide');
     stopBtn.classList.remove('hide');
 
